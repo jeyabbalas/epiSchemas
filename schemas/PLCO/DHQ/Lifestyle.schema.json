@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/DHQ/Lifestyle.schema.json",
+    "title": "Diet History Questionnaire (DHQ) Lifestyle",
+    "type": "object",
+    "properties": {
+        "drinker_dhq": {
+            "type": "string",
+            "title": "Drink Alcohol? - DHQ",
+            "description": "Alcohol servings and serving sizes were asked on pages 3-4 of the DHQ for beer, wine, or wine coolers and liquor or mixed drinks.",
+            "enum": [
+                ".",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "missing",
+                "no",
+                "yes"
+            ]
+        }
+    },
+    "required": [
+        "drinker_dhq"
+    ]
+}

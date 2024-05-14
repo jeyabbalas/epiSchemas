@@ -1,0 +1,104 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/BQ/Demographics.schema.json",
+    "title": "Baseline Questionnaire (BQ) Demographics",
+    "type": "object",
+    "properties": {
+        "hispanic_f": {
+            "type": "string",
+            "title": "Are You Of Hispanic Origin?",
+            "description": "BQ Form Versions 1 and 2: Question 2. BQ Form Version 3: Question 2a. What is your race or ethnicity?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Not Hispanic",
+                "Hispanic"
+            ]
+        },
+        "marital": {
+            "type": "string",
+            "title": "Marital Status",
+            "description": "Question 4 - \"What is your current marital status?\"",
+            "enum": [
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Married Or Living As Married",
+                "Widowed",
+                "Divorced",
+                "Separated",
+                "Never Married"
+            ]
+        },
+        "occupat": {
+            "type": "string",
+            "title": "Occupation",
+            "description": "Question 5 - \"Which of these categories best describes your current working situation?\"",
+            "enum": [
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Homemaker",
+                "Working",
+                "Unemployed",
+                "Retired",
+                "Extended Sick Leave",
+                "Disabled",
+                "Other"
+            ]
+        },
+        "race7": {
+            "type": "string",
+            "title": "Race",
+            "description": "BQ Form Versions 1 and 2: Question 2 - \"Which of these best describes your race or ethnic background?\" BQ Form Version 3: Question 2 - \"Which of these groups best describes you?\" Question 2a - \"Are you of Hispanic origin?\" Participants can only be considered white or black when they are not Hispanic. If the participant is white or black and Hispanic, then they are considered Hispanic. If the participant is Asian, Pacific Islander, or American Indian then they are considered that race.",
+            "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "White, Non-Hispanic",
+                "Black, Non-Hispanic",
+                "Hispanic",
+                "Asian",
+                "Pacific Islander",
+                "American Indian",
+                "Missing"
+            ]
+        }
+    },
+    "required": [
+        "hispanic_f",
+        "marital",
+        "occupat",
+        "race7"
+    ]
+}

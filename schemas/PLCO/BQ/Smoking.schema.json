@@ -1,0 +1,261 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/BQ/Smoking.schema.json",
+    "title": "Baseline Questionnaire (BQ) Smoking",
+    "type": "object",
+    "properties": {
+        "cig_stat": {
+            "type": "string",
+            "title": "Cigarette Smoking Status",
+            "description": "Participant's current cigarette smoking status.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Not Answered",
+                "Never Smoked Cigarettes",
+                "Current Cigarette Smoker",
+                "Former Cigarette Smoker"
+            ]
+        },
+        "cig_stop": {
+            "type": [
+                "string",
+                "number"
+            ],
+            "title": "# of Years Since Stopped Smoking Cigarettes",
+            "description": "The number of years passed since the participant has stopped smoking.",
+            "enum": [
+                ".F",
+                ".M",
+                ".N",
+                0.5
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Not Applicable",
+                "Six Months"
+            ]
+        },
+        "cig_years": {
+            "type": [
+                "string",
+                "number"
+            ],
+            "title": "Duration Smoked Cigarettes",
+            "description": "The total number of years the participant smoked.",
+            "enum": [
+                ".F",
+                ".M",
+                0.5
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Six Months"
+            ]
+        },
+        "cigar": {
+            "type": "string",
+            "title": "Ever Smoked Cigars?",
+            "description": "Question 17 - \"Do you now or did you ever smoke cigars regularly for a year or longer?\"",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Never",
+                "Current Cigar Smoker",
+                "Former Cigar Smoker"
+            ]
+        },
+        "cigpd_f": {
+            "type": "string",
+            "title": "# of Cigarettes Smoked Per Day",
+            "description": "Question 14 - \"During periods when you smoked, how many cigarettes did or do you usually smoke per day?\"",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "0",
+                "1-10",
+                "11-20",
+                "21-30",
+                "31-40",
+                "41-60",
+                "61-80",
+                "81+"
+            ]
+        },
+        "filtered_f": {
+            "type": "string",
+            "title": "Usually Filtered or Non-Filtered?",
+            "description": "Question 15 - \"During periods when you smoked, did or do you more often smoke filter or non-filter cigarettes?\"",
+            "enum": [
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Not Applicable",
+                "Filter",
+                "Non-Filter",
+                "About Equal"
+            ]
+        },
+        "pack_years": {
+            "type": [
+                "string",
+                "number"
+            ],
+            "title": "Pack Years",
+            "description": "Number of packs smoked per day * years smoked.",
+            "enum": [
+                ".F",
+                ".M"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Missing"
+            ]
+        },
+        "pipe": {
+            "type": "string",
+            "title": "Ever Smoked a Pipe?",
+            "description": "Question 16 - \"Do you now or did you ever smoke a pipe regularly for a year or longer?\"",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Never",
+                "Current Pipe Smoker",
+                "Former Pipe Smoker"
+            ]
+        },
+        "rsmoker_f": {
+            "type": "string",
+            "title": "Smoke Regularly Now?",
+            "description": "Question 12 - \"Do you smoke cigarettes regularly now?\"",
+            "enum": [
+                ".F",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Not Applicable",
+                "No",
+                "Yes"
+            ]
+        },
+        "smokea_f": {
+            "type": [
+                "string",
+                "number"
+            ],
+            "title": "Age Started Smoking",
+            "description": "Question 11 - \"At what age did you start smoking cigarettes regularly?\"",
+            "enum": [
+                ".F",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered Or Inconsistent Data",
+                "Not Applicable",
+                "Age not in reasonable range."
+            ]
+        },
+        "smoked_f": {
+            "type": "string",
+            "title": "Ever Smoke Regularly >= 6 Months?",
+            "description": "Question 10 - \"Have you ever smoked cigarettes regularly for six months or longer?\"",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "ssmokea_f": {
+            "type": [
+                "string",
+                "number"
+            ],
+            "title": "Age Stopped Smoking",
+            "description": "Question 13 - \"At what age did you last stop smoking cigarettes regularly?\"",
+            "enum": [
+                ".F",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered Or Inconsistent Data",
+                "Not Applicable",
+                "Age not in reasonable range."
+            ]
+        }
+    },
+    "required": [
+        "cig_stat",
+        "cig_stop",
+        "cig_years",
+        "cigar",
+        "cigpd_f",
+        "filtered_f",
+        "pack_years",
+        "pipe",
+        "rsmoker_f",
+        "smokea_f",
+        "smoked_f",
+        "ssmokea_f"
+    ]
+}

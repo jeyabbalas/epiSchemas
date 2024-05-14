@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/DHQ/Compliance.schema.json",
+    "title": "Diet History Questionnaire (DHQ) Compliance",
+    "type": "object",
+    "properties": {
+        "age_dhq": {
+            "type": [
+                "number",
+                "string"
+            ],
+            "title": "Age at DHQ",
+            "description": "Calculated using date completed DHQ and Date of birth (DOB).",
+            "oneOf": [
+                {
+                    "type": "number"
+                },
+                {
+                    "type": "string",
+                    "enum": [
+                        "."
+                    ],
+                    "enumDescriptions": [
+                        "Missing Data"
+                    ]
+                }
+            ]
+        },
+        "dhq_completedvalid": {
+            "type": "string",
+            "title": "Completed Valid DHQ?",
+            "description": "Valid DHQ if: date of completion provided (exc_nodate_dhq) and alive when completed (exc_death_dhq) and not missing 8+ frequency responses (exc_freq_dhq) and not extreme calories (exc_kcal_dhq)",
+            "enum": [
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "no",
+                "yes"
+            ]
+        }
+    },
+    "required": [
+        "age_dhq",
+        "dhq_completedvalid"
+    ]
+}

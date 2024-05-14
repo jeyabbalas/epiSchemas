@@ -1,0 +1,830 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/SQX/Tobacco.schema.json",
+    "title": "Supplemental Questionnaire (SQX) Tobacco",
+    "type": "object",
+    "properties": {
+        "pack_years_bqelsesqx": {
+            "type": "string",
+            "title": "Pack Years (SQX + BQ)",
+            "description": "When Baseline Questionnaire (BQ) smoking intensity is not missing or 0, uses BQ smoking intensity, else uses the SQX smoking intensity if available.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank"
+            ]
+        },
+        "sqx_advise_quit": {
+            "type": "string",
+            "title": "Advised to Quit Smoking (SQX)",
+            "description": "Recent professional opinion to quit smoking. Question 54- \"During the past 12 months did any doctor, dentist, nurse or any other health professional advise you to quit smoking?\" Cleaned version of question 54 using questions 41-54.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "Yes",
+                "No, was not Advised to Quit",
+                "No, Did not See a Health Professional",
+                "No, Did not Smoke in Past 12 Months"
+            ]
+        },
+        "sqx_amt_smk": {
+            "type": "string",
+            "title": "Cigarettes Per Day (SQX)",
+            "description": "Past month's smoking frequency. Question 46- \"In the past 30 days, on days that you smoked, about how many cigarettes did you usually smoke per day?\" Cleaned version of question 46 using questions 41-54.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "1-5 Each Day",
+                "6 - Under 1 Pack Each Day",
+                "About 1 Pack Each Day",
+                "About 1 1/2 Packs Each Day",
+                "About 2 Packs Each Day",
+                "More than 2 Packs Each Day"
+            ]
+        },
+        "sqx_cig_years": {
+            "type": "string",
+            "title": "Years Smoked (SQX)",
+            "description": "Total number of years the participant smoked cigarettes. Only has values for current and former smokers (sqxo_cig_stat). Derived using questions 41, 42, 45, 50, 51, 52",
+            "enum": [
+                ".A",
+                ".F",
+                ".M"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank"
+            ]
+        },
+        "sqx_nicotine_gum": {
+            "type": "string",
+            "title": "Nicotine Gum (SQX)",
+            "description": "Nicotine gum used as a cessation aid. Question 53- \"Thinking of the most recent time you quit smoking, did you use any of the following products?\" Cleaned version of question 53 using questions 41-54. Question 53 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_nicotine_oth": {
+            "type": "string",
+            "title": "Nicotine Other (SQX)",
+            "description": "Nicotine nasal spray, inhaler, lozenge or tablet used as a cessation aid. Question 53- \"Thinking of the most recent time you quit smoking, did you use any of the following products?\" Cleaned version of question 53 using questions 41-54. Question 53 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_nicotine_patch": {
+            "type": "string",
+            "title": "Nicotine Patch (SQX)",
+            "description": "Nicotine patch used as a cessation aid. Question 53- \"Thinking of the most recent time you quit smoking, did you use any of the following products?\" Cleaned version of question 53 using questions 41-54. Question 53 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_nvr_smk_reg": {
+            "type": "string",
+            "title": "Never Smoked Regularly (SQX)",
+            "description": "Indicates if participant considers themselves a never smoker. Question 42- \"Fill in the circle if you have never smoked regularly.\" Cleaned version of question 42 using questions 41-54. Question 42 has 2 parts and cleaned variables.",
+            "enum": [
+                ".F",
+                ".M",
+                ".N",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "N/A",
+                "Never Smoked Regularly"
+            ]
+        },
+        "sqx_risk_lungca": {
+            "type": "string",
+            "title": "Perceived Risk of Lung Cancer Diagnosis (SQX)",
+            "description": "Question 59- \"Compared to others your age who currently smoke, what do you think your chances of being diagnosed with lung cancer are during your lifetime?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "At Much Less Risk",
+                "At Less Risk",
+                "At Same Risk",
+                "At Higher Risk",
+                "At Much Higher Risk"
+            ]
+        },
+        "sqx_smk100": {
+            "type": "string",
+            "title": "Smoked 100 Cigarettes (SQX)",
+            "description": "Indicator for high lifetime cigarette exposure. Question 41- \"Have you smoked at least 100 cigarettes in your entire life?\" Cleaned version of question 41 using questions 41-54.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_smk30days": {
+            "type": "string",
+            "title": "Smoke in the Last 30 Days (SQX)",
+            "description": "Past month's smoking status. Question 45- \"In the past 30 days did you smoke cigarettes every day, some days or not at all?\" Cleaned version of question 45 using questions 41-54.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "Every Day",
+                "Some Days",
+                "Not at All"
+            ]
+        },
+        "sqx_smk_age_quit": {
+            "type": "string",
+            "title": "Age Last Stopped Smoking (SQX)",
+            "description": "Age last stopped smoking. Question 52- \"How old were you when you most recently quit smoking?\" Cleaned version of Question 52 using questions 41-54.",
+            "enum": [
+                "Numeric",
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "Out of Range"
+            ]
+        },
+        "sqx_smk_aid_none": {
+            "type": "string",
+            "title": "No Cessation Aids (SQX)",
+            "description": "Other method of cessation not listed. Question 53- \"Thinking of the most recent time you quit smoking, did you use any of the following products?\" Cleaned version of question 53 using questions 41-54. Question 53 has multiple parts and cleaned variables.",
+            "enum": [
+                ".F",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "N/A",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_smk_BEHV": {
+            "type": "string",
+            "title": "Smoking Behavior Index (SQX)",
+            "description": "Current smokers Smoking Behavior Index calculated using the participant's smoking cravings. Derived using question 48",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".N"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "N/A"
+            ]
+        },
+        "sqx_smk_crave1": {
+            "type": "string",
+            "title": "Trouble Not Smoking for Few Hours (SQX)",
+            "description": "Regular cravings for cigarettes. Question 48- \"Mark true or false for the following statement: 'When I go without smoking for a few hours, I experience craving.'\" Cleaned version of question 48 using questions 41-54. Question 48 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "False",
+                "True"
+            ]
+        },
+        "sqx_smk_crave2": {
+            "type": "string",
+            "title": "Go to Store in the Rain for Cigarettes (SQX)",
+            "description": "Motivation level for acquiring more cigarettes. Question 48- \"Mark true or false for the following statement: 'Even in a bad rainstorm, if I ran out of cigarettes, I would probably go to the store to get some more.'\" Cleaned version of question 48 using questions 41-54. Question 48 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "False",
+                "True"
+            ]
+        },
+        "sqx_smk_crave3": {
+            "type": "string",
+            "title": "Experience Cigarette Craving (SQX)",
+            "description": "Regular cravings for cigarettes. Question 48- \"Mark true or false for the following statement: 'I have trouble going more than a few hours without smoking'\" Cleaned version of question 48 using questions 41-54. Question 48 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "False",
+                "True"
+            ]
+        },
+        "sqx_smk_crave4": {
+            "type": "string",
+            "title": "Would go Outside for Cigarettes (SQX)",
+            "description": "Motivation for smoking. Question 48- \"Mark true or false for the following statement: 'If I were in a public place where smoking was not allowed, I would probably go outside to smoke a cigarette, even in cold or rainy weather.'\" Cleaned version of question 48 using questions 41-54. Question 48 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "False",
+                "True"
+            ]
+        },
+        "sqx_smk_exp_adult": {
+            "type": "string",
+            "title": "Lived with Smoker After Age 18 (SQX)",
+            "description": "Question 56- \"As an adult (AFTER you turned 18), did you ever live with someone who smoked cigarettes in the home on a regular basis?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Yes, During Most of your adult life",
+                "Yes, During Some of your adult life",
+                "No, Not at All"
+            ]
+        },
+        "sqx_smk_exp_child": {
+            "type": "string",
+            "title": "Lived with Smoker Prior to Age 18 (SQX)",
+            "description": "Question 55- \"Before you were 18, did you ever live with someone who smoked cigarettes in the home on a regular basis?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Yes, During Most of your childhood",
+                "Yes, During Some of your childhood",
+                "No, Not at All"
+            ]
+        },
+        "sqx_smk_exp_work": {
+            "type": "string",
+            "title": "Worked with Smoker as Adult (SQX)",
+            "description": "Question 57- \"As an adult (AFTER you turned 18), did you ever work indoors with someone who smoked cigarettes in your work area on a regular basis?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Yes, During Most of your work experience",
+                "Yes, During Some of your work experience",
+                "No, Not at All"
+            ]
+        },
+        "sqx_smk_FTND": {
+            "type": "string",
+            "title": "Fagerstrom Test of Nicotine Dependency (SQX)",
+            "description": "Current smokers Fagerstrom Test of Nicotine Dependency calculated by combining the Heavy Smoking Index and the Smoking Behavior Index. Derived from other derived variables.",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".N"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "N/A"
+            ]
+        },
+        "sqx_smk_HIS": {
+            "type": "string",
+            "title": "Heavy Smoking Index (SQX)",
+            "description": "Current smokers Heavy Smoking Index calculated using how many cigarettes the participant smoked in the past 30 days and how soon after waking the participant had their first cigarette. Derived using questions 46, 47",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".N"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "N/A"
+            ]
+        },
+        "sqx_smk_lgt": {
+            "type": "string",
+            "title": "Cigarette Type (SQX)",
+            "description": "Types of cigarettes most commonly smoked. Question 43- \"Over your lifetime did you mainly smoke ultra-light, light or regular cigarettes?\" Cleaned version of question 43 using questions 41-54.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "Ultra-Light",
+                "Light or Mild",
+                "Regular or Full-flavor",
+                "No Usual Type of Cigarettes"
+            ]
+        },
+        "sqx_smk_menthol": {
+            "type": "string",
+            "title": "Menthol or Non-Menthol (SQX)",
+            "description": "Menthol cigarettes or not. Question 44- \"Over your lifetime did you mainly smoke menthol or non-menthol cigarettes?\" Cleaned version of question 44 using questions 41-54.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "Menthol",
+                "Non-menthol",
+                "No Usual Type of Cigarettes"
+            ]
+        },
+        "sqx_smk_plan_quit": {
+            "type": "string",
+            "title": "Quit Smoking 6 Months (SQX)",
+            "description": "Planning to quit in near future. Question 49- \"Are you considering quitting smoking during the next 6 months?\" Cleaned version of question 49 using questions 41-54.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "Yes, within Next 30 Days",
+                "Yes, within Next 6 Months",
+                "No"
+            ]
+        },
+        "sqx_smk_quit_dur": {
+            "type": "string",
+            "title": "Longest Time Quit (SQX)",
+            "description": "Previous longest duration of quitting smoking. Question 51- \"What was the longest length of time you stopped smoking because you were trying to quit?\" Cleaned version of question 51 using questions 41-54.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "Less than 1 Week",
+                "1-3 Weeks",
+                "1-2 Months",
+                "3-11 Months",
+                "1-4 Years",
+                "5-9 Years",
+                "10+ Years"
+            ]
+        },
+        "sqx_smk_try_quit": {
+            "type": "string",
+            "title": "Serious Attempt to Quit (SQX)",
+            "description": "Previous attempts to quit smoking. Question 50- \"In the past, have you ever made a serious attempt to quit smoking? That is, have you stopped smoking for at least one day or longer because you were trying to quit?\" Cleaned version of question 50 using questions 41-54.",
+            "enum": [
+                ".F",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "N/A",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_smk_wake": {
+            "type": "string",
+            "title": "Wake Up Smoke (SQX)",
+            "description": "Average time before smoking each day. Question 47- \"How soon after you wake up do you usually smoke your first cigarette of the day?\" Cleaned version of question 47 using questions 41-54.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A",
+                "Within 5 Minutes",
+                "6-30 Minutes",
+                "31-60 Minutes",
+                "More than 60 Minutes"
+            ]
+        },
+        "sqx_smokea": {
+            "type": "string",
+            "title": "Age Started Smoking (SQX)",
+            "description": "Age Started Smoking. Question 42- \"How old were you when you first started smoking cigarettes regularly?\" Cleaned version of Question 42 using questions 41-54 . Questions 42 has 2 parts and cleaned variables.",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "N/A",
+                "Out of Range"
+            ]
+        },
+        "sqx_worry_lungca": {
+            "type": "string",
+            "title": "Lung Cancer Concern (SQX)",
+            "description": "Question 58- \"How often do you worry about getting lung cancer?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Rarely or Never",
+                "Sometimes",
+                "Often",
+                "All the Time"
+            ]
+        },
+        "sqx_years_quit": {
+            "type": "string",
+            "title": "Years Quit Smoking (SQX)",
+            "description": "Number of years since the participant quit smoking. Only has values for former smokers (sqxo_cig_stat). Derived using questions, 41, 50, 51, 52",
+            "enum": [
+                "Numeric",
+                ".A",
+                ".F",
+                ".M",
+                ".N"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable"
+            ]
+        },
+        "sqx_zyban": {
+            "type": "string",
+            "title": "Prescription Pills (SQX)",
+            "description": "Prescription pills used as a cessation aid (Zyban, Buproprion, Wellbutrin, etc.). Question 53- \"Thinking of the most recent time you quit smoking, did you use any of the following products?\" Cleaned version of question 53 using questions 41-54. Question 53 has multiple parts and cleaned variables.",
+            "enum": [
+                ".F",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "N/A",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_cig_change": {
+            "type": "string",
+            "title": "Cigarette Smoking Change (SQX + BQ)",
+            "description": "Smoking pattern from BQ completion to SQX completion. Derived using smoking statuses and ages from BQ and SQX.",
+            "enum": [
+                ".A",
+                ".F",
+                ".I",
+                ".M",
+                "0",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous in either BQ or SQX",
+                "Not in SQX or Not in BQ",
+                "BQ & SQX Inconsistent",
+                "Missing Data in either BQ or SQX",
+                "Never Smoked",
+                "Former (BQ) who are Still Former",
+                "New Quitter (Current Smoker at BQ)",
+                "Relapsed (Former at BQ) now Current",
+                "Current (was also Current at BQ)"
+            ]
+        },
+        "sqxbq_cig_stat": {
+            "type": "string",
+            "title": "Cigarette Smoking Status (SQX + BQ)",
+            "description": "Cigarette Smoking Status. Derived using questions 41-54 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Missing Data in SQX",
+                "Never Smoked at SQX",
+                "Current Smoker at SQX",
+                "Former Smoker at SQX"
+            ]
+        },
+        "sqxo_cig_stat": {
+            "type": "string",
+            "title": "Cigarette Smoking Status (SQX)",
+            "description": "Cigarette Smoking Status. Derived using questions 41-54.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "Ambiguous in SQX",
+                "No Form",
+                "Missing Data in SQX",
+                "Never Smoked at SQX",
+                "Current Smoker at SQX",
+                "Former Smoker at SQX"
+            ]
+        },
+        "sqxo_pack_years_curr": {
+            "type": "string",
+            "title": "Pack Years (SQX)",
+            "description": "Pack Years. Number of packs smoked per day multiplied by years smoked. For Current smokers only. Derived using questions 42, 46, 51",
+            "enum": [
+                "Numeric",
+                ".A",
+                ".F",
+                ".M",
+                ".N"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable"
+            ]
+        }
+    },
+    "required": [
+        "pack_years_bqelsesqx",
+        "sqx_advise_quit",
+        "sqx_amt_smk",
+        "sqx_cig_years",
+        "sqx_nicotine_gum",
+        "sqx_nicotine_oth",
+        "sqx_nicotine_patch",
+        "sqx_nvr_smk_reg",
+        "sqx_risk_lungca",
+        "sqx_smk100",
+        "sqx_smk30days",
+        "sqx_smk_age_quit",
+        "sqx_smk_aid_none",
+        "sqx_smk_BEHV",
+        "sqx_smk_crave1",
+        "sqx_smk_crave2",
+        "sqx_smk_crave3",
+        "sqx_smk_crave4",
+        "sqx_smk_exp_adult",
+        "sqx_smk_exp_child",
+        "sqx_smk_exp_work",
+        "sqx_smk_FTND",
+        "sqx_smk_HIS",
+        "sqx_smk_lgt",
+        "sqx_smk_menthol",
+        "sqx_smk_plan_quit",
+        "sqx_smk_quit_dur",
+        "sqx_smk_try_quit",
+        "sqx_smk_wake",
+        "sqx_smokea",
+        "sqx_worry_lungca",
+        "sqx_years_quit",
+        "sqx_zyban",
+        "sqxbq_cig_change",
+        "sqxbq_cig_stat",
+        "sqxo_cig_stat",
+        "sqxo_pack_years_curr"
+    ]
+}

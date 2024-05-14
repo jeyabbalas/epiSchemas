@@ -1,0 +1,78 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/Exit.schema.json",
+    "title": "Exit",
+    "type": "object",
+    "properties": {
+        "j_fstcan_exitage": {
+            "type": "number",
+            "title": "First Cancer Incidence Exit Age",
+            "description": "Age of participant at exit for first cancer incidence. This is age at diagnosis for participants with cancer and age at trial exit otherwise. Only cancers occurring during the trial are used to determine exit."
+        },
+        "j_fstcan_exitdays": {
+            "type": "number",
+            "title": "Days Until First Cancer Incidence Exit",
+            "description": "Days from trial entry (randomization) to first cancer diagnosis for participants with cancer, or to trial exit otherwise. Only cancers occurring during the trial are used to determine exit."
+        },
+        "j_fstcan_exitstat": {
+            "type": "string",
+            "title": "First Cancer Incidence Exit Status",
+            "description": "Status of the participant at exit for first cancer incidence. Only cancers occurring during the trial are used to determine exit.",
+            "enum": [
+                "0",
+                "1",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "enumDescriptions": [
+                "No Time at Risk",
+                "Confirmed Cancer",
+                "Last Participant Contact Prior to Unconfirmed Report",
+                "Last Participant Contact",
+                "Death",
+                "Date Lost, Prior to Death",
+                "Registry Search Completeness Date",
+                "Cancer Free at Cutoff"
+            ]
+        },
+        "mortality_exitage": {
+            "type": "number",
+            "title": "Exit Age for Mortality",
+            "description": "Age of the participant at death, or when last known to be alive."
+        },
+        "mortality_exitdays": {
+            "type": "number",
+            "title": "Days Until Mortality Exit",
+            "description": "Days from randomization until mortality exit date. This is the day of death or the day last known alive. Participants are known alive through either trial contact or by queries to National Death Index (NDI)."
+        },
+        "mortality_exitstat": {
+            "type": "string",
+            "title": "Exit Status for Mortality",
+            "description": "Status of the participant at mortality exit. For participants not confirmed dead, this is the most recent contact or National Death Index (NDI) search indicating the participant is alive.",
+            "enum": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Death",
+                "Last NDI/Cutoff",
+                "Refusal",
+                "Other"
+            ]
+        }
+    },
+    "required": [
+        "j_fstcan_exitage",
+        "j_fstcan_exitdays",
+        "j_fstcan_exitstat",
+        "mortality_exitage",
+        "mortality_exitdays",
+        "mortality_exitstat"
+    ]
+}

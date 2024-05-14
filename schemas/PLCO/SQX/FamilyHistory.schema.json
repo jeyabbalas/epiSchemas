@@ -1,0 +1,406 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/SQX/FamilyHistory.schema.json",
+    "title": "Supplemental Questionnaire (SQX) Family History",
+    "type": "object",
+    "properties": {
+        "sqx_brothers": {
+            "type": "string",
+            "title": "# of Brothers (SQX)",
+            "description": "Question 16 - \"How many of each of the following blood relatives (do not count half sisters or half brothers) do/did you have? (Please include any deceased)\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5+"
+            ]
+        },
+        "sqx_dad_age": {
+            "type": "string",
+            "title": "Father's Age at Participant's Birth (SQX)",
+            "description": "Question 14 - \"What was your father's age when you were born?\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "< 20",
+                "20-29",
+                "30-39",
+                "40-49",
+                "50-59",
+                "60-69",
+                "70+",
+                "Unknown"
+            ]
+        },
+        "sqx_daughters": {
+            "type": "string",
+            "title": "# of Daughters (SQX)",
+            "description": "Question 16 - \"How many of each of the following blood relatives do/did you have? (Please include any deceased)\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5+"
+            ]
+        },
+        "sqx_fh_blad": {
+            "type": "string",
+            "title": "Family History of Bladder Cancer (SQX)",
+            "description": "Bladder cancer family history in first-degree relatives. Includes parents, full-siblings, and children. Derived using question 17.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_fh_breast": {
+            "type": "string",
+            "title": "Family History of Breast Cancer (SQX)",
+            "description": "Breast cancer family history in first-degree relatives. Includes parents, full-siblings, and children. Derived using question 17.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_fh_cancer_f": {
+            "type": "string",
+            "title": "Family History of Cancer (SQX)",
+            "description": "Cancer family history in first-degree relatives. First-degree relatives include parents, full-siblings, and children. Cleaned version of question 17.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_fh_colo": {
+            "type": "string",
+            "title": "Family History of Colorectal Cancer (SQX)",
+            "description": "Colorectal cancer family history in first-degree relatives. Includes parents, full-siblings, and children. Derived using question 17.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_fh_dnkn": {
+            "type": "string",
+            "title": "Family History of Unknown Type of Cancer (SQX)",
+            "description": "Don't know the type of cancer family history in first-degree relatives. Includes parents, full-siblings, and children. Derived using question 17.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_fh_endo": {
+            "type": "string",
+            "title": "Family History of Endometrial Cancer (SQX)",
+            "description": "Endometrial cancer family history in first-degree relatives. Includes parents, full-siblings, and children. Derived using question 17.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_fh_leuk": {
+            "type": "string",
+            "title": "Family History of Leukemia (SQX)",
+            "description": "Leukemia family history in first-degree relatives. Includes parents, full-siblings, and children. Derived using question 17.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_fh_lung": {
+            "type": "string",
+            "title": "Family History of Lung Cancer (SQX)",
+            "description": "Lung cancer family history in first-degree relatives. Includes parents, full-siblings, and children. Derived using question 17.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_fh_lymph": {
+            "type": "string",
+            "title": "Family History of Lymphoma (SQX)",
+            "description": "Lymphoma family history in first-degree relatives. Includes parents, full-siblings, and children. Derived using question 17.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_fh_othr": {
+            "type": "string",
+            "title": "Family History of Other Cancer (SQX)",
+            "description": "Other type of cancer family history in first-degree relatives. Includes parents, full-siblings, and children. Derived using question 17.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_fh_ovar": {
+            "type": "string",
+            "title": "Family History of Ovarian Cancer (SQX)",
+            "description": "Ovarian cancer family history in first-degree relatives. Includes parents, full-siblings, and children. Derived using question 17.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_fh_pros": {
+            "type": "string",
+            "title": "Family History of Prostate Cancer (SQX)",
+            "description": "Prostate cancer family history in first-degree relatives. Includes parents, full-siblings, and children. Derived using question 17.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_mom_age": {
+            "type": "string",
+            "title": "Mother's Age at Participant's Birth (SQX)",
+            "description": "Question 15 - \"What was your mother's age when you were born?\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "< 20",
+                "20-24",
+                "25-29",
+                "30-34",
+                "35-39",
+                "40-44",
+                "45+",
+                "Unknown"
+            ]
+        },
+        "sqx_sisters": {
+            "type": "string",
+            "title": "# of Sisters (SQX)",
+            "description": "Question 16 - \"How many of each of the following blood relatives (do not count half sisters or half brothers) do/did you have? (Please include any deceased)\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5+"
+            ]
+        },
+        "sqx_sons": {
+            "type": "string",
+            "title": "# of Sons (SQX)",
+            "description": "Question 16 - \"How many of each of the following blood relatives do/did you have? (Please include any deceased)\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5+"
+            ]
+        }
+    },
+    "required": [
+        "sqx_brothers",
+        "sqx_dad_age",
+        "sqx_daughters",
+        "sqx_fh_blad",
+        "sqx_fh_breast",
+        "sqx_fh_cancer_f",
+        "sqx_fh_colo",
+        "sqx_fh_dnkn",
+        "sqx_fh_endo",
+        "sqx_fh_leuk",
+        "sqx_fh_lung",
+        "sqx_fh_lymph",
+        "sqx_fh_othr",
+        "sqx_fh_ovar",
+        "sqx_fh_pros",
+        "sqx_mom_age",
+        "sqx_sisters",
+        "sqx_sons"
+    ]
+}

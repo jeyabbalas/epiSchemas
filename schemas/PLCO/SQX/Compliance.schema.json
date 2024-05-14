@@ -1,0 +1,124 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/SQX/Compliance.schema.json",
+    "title": "Supplemental Questionnaire (SQX) Compliance",
+    "type": "object",
+    "properties": {
+        "ph_any_sqx": {
+            "type": "string",
+            "title": "Personal History of Any Cancer Before SQX Entry",
+            "description": "Did the participant have a personal history of any cancer reported on the Baseline Questionnaire (BQ), Annual Study Update Form (ATF), Medical Data Form (MDF) or cancer diagnosis prior to SQX entry?",
+            "enum": [
+                ".F",
+                "0",
+                "1",
+                "9"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "No",
+                "Yes",
+                "Unknown - BQ History Unknown and No Cancer History from Another Source"
+            ]
+        },
+        "sqx_age": {
+            "type": [
+                "number",
+                "string"
+            ],
+            "title": "Age (SQX)",
+            "description": "The age of the participant at SQX completion.",
+            "pattern": "^\\d+$|\\.F",
+            "enum": [
+                ".F"
+            ],
+            "enumDescriptions": [
+                "No Form"
+            ]
+        },
+        "sqx_days": {
+            "type": [
+                "number",
+                "string"
+            ],
+            "title": "Days from randomization to Completion (SQX)",
+            "description": "Number of days from randomization to the completion date.",
+            "pattern": "^\\d+$|\\.F",
+            "enum": [
+                ".F"
+            ],
+            "enumDescriptions": [
+                "No Form"
+            ]
+        },
+        "sqx_status": {
+            "type": "string",
+            "title": "SQX Form Status",
+            "description": "Eligibility and compliance of the SQX form.",
+            "enum": [
+                "1",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Compliant, Valid",
+                "Non-eligible",
+                "Non-compliant",
+                "Compliant, Invalid"
+            ]
+        },
+        "sqx_substatus": {
+            "type": "string",
+            "title": "SQX Form Status",
+            "description": "More detailed eligibility and compliance of the SQX form.",
+            "enum": [
+                "1",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "11",
+                "12",
+                "13"
+            ],
+            "enumDescriptions": [
+                "Compliant, Valid",
+                "Non-eligible: Dead Before SQX",
+                "Non-eligible: Participant Withdrew Before SQX",
+                "Non-eligible: Not Selected, NOS",
+                "Non-compliant: SQX Not Mailed",
+                "Non-compliant: SQX Not Delivered",
+                "Non-compliant: SQX Not Returned",
+                "Compliant, Invalid: SQX Not Scanned",
+                "Compliant, Invalid: Wrong Gender",
+                "Compliant, Invalid: No Answers",
+                "Compliant, Invalid: Multiple Answers"
+            ]
+        },
+        "sqx_valid": {
+            "type": "string",
+            "title": "Has Valid SQX",
+            "description": "Completed valid SQX form. For reasons for no form, refer to sqx_status and sqx_substatus.",
+            "enum": [
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Valid SQX",
+                "Completed Valid SQX"
+            ]
+        }
+    },
+    "required": [
+        "ph_any_sqx",
+        "sqx_age",
+        "sqx_days",
+        "sqx_status",
+        "sqx_substatus",
+        "sqx_valid"
+    ]
+}

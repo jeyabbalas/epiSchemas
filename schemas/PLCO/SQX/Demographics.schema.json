@@ -1,0 +1,252 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/SQX/Demographics.schema.json",
+    "title": "Supplemental Questionnaire (SQX) Demographics",
+    "type": "object",
+    "properties": {
+        "sqx_income": {
+            "type": "string",
+            "title": "Income (SQX)",
+            "description": "Question 6 - \"What is your current family income?\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "< $20,000",
+                "$20,000-$49,000",
+                "$50,000-$99,000",
+                "$100,000-$200,000",
+                ">$200,000",
+                "Prefer not to Answer"
+            ]
+        },
+        "sqx_religion": {
+            "type": "string",
+            "title": "Religion at Birth (SQX)",
+            "description": "Question 3 - \"Into what religion were you born?\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Catholic",
+                "Christian Scientist",
+                "Greek Orthodox",
+                "Jewish",
+                "LDS or Mormon",
+                "Protestant",
+                "Seventh Day Adventist",
+                "Other (Specify)",
+                "None"
+            ]
+        },
+        "sqx_workstat": {
+            "type": "string",
+            "title": "Current Work Status (SQX)",
+            "description": "Question 2 - \"Are you currently. . . [work status]?\" Unedited.",
+            "enum": [
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "10"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "Homemaker",
+                "Employed Full-time",
+                "Employed Part-time",
+                "Extended Sick Leave",
+                "Other (Specify)",
+                "Unemployed",
+                "Retired",
+                "Disabled",
+                "Retired + Other"
+            ]
+        },
+        "sqxbq_hispanic": {
+            "type": "string",
+            "title": "Hispanic (SQX + BQ)",
+            "description": "Are you Hispanic or Latino? Cleaned version of question 4 by aligning with Baseline Questionnaire (BQ). If the SQX response conflicts with the BQ, then this is set to ambiguous.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Non-Hispanic",
+                "Hispanic"
+            ]
+        },
+        "sqxbq_marital": {
+            "type": "string",
+            "title": "Marital Status (SQX + BQ)",
+            "description": "What is your current marital status? Cleaned version of question 1 by aligning with Baseline Questionnaire (BQ). If the SQX response conflicts with the BQ, then this is set to ambiguous.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Married or Living as Married",
+                "Widowed",
+                "Divorced",
+                "Separated",
+                "Never Married"
+            ]
+        },
+        "sqxbq_race7": {
+            "type": "string",
+            "title": "Race (SQX + BQ)",
+            "description": "What is your race? Derived using questions 4 and 5 and aligned with Baseline Questionnaire (BQ). If the SQX response conflicts with the BQ, then this is set to ambiguous. If the participant is Hispanic and either white or black, then they are considered Hispanic. If the participant is Asian, Pacific Islander, or American Indian then they are considered that race irrespective of their Hispanic status.",
+            "enum": [
+                ".A",
+                ".F",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "White",
+                "Black or African-American",
+                "Hispanic",
+                "Asian",
+                "Native Hawaiian or Other Pacific Islander",
+                "American Indian or Alaskan Native",
+                "Missing"
+            ]
+        },
+        "sqxo_hispanic": {
+            "type": "string",
+            "title": "Hispanic (SQX)",
+            "description": "Question 4 - \"Are you Hispanic or Latino?\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Non-Hispanic",
+                "Hispanic"
+            ]
+        },
+        "sqxo_marital": {
+            "type": "string",
+            "title": "Marital Status (SQX)",
+            "description": "Question 1 - \"What is your current marital status?\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Married or Living as Married",
+                "Widowed",
+                "Divorced",
+                "Separated",
+                "Never Married"
+            ]
+        },
+        "sqxo_race7": {
+            "type": "string",
+            "title": "Race (SQX)",
+            "description": "What is your race? Derived using questions 4 and 5. If the participant is Hispanic and either white or black, then they are considered Hispanic. If the participant is Asian, Pacific Islander, or American Indian then they are considered that race irrespective of their Hispanic status.",
+            "enum": [
+                ".A",
+                ".F",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "White",
+                "Black or African-American",
+                "Hispanic",
+                "Asian",
+                "Native Hawaiian or Other Pacific Islander",
+                "American Indian or Alaskan Native",
+                "Missing"
+            ]
+        }
+    },
+    "required": [
+        "sqx_income",
+        "sqx_religion",
+        "sqx_workstat",
+        "sqxbq_hispanic",
+        "sqxbq_marital",
+        "sqxbq_race7",
+        "sqxo_hispanic",
+        "sqxo_marital",
+        "sqxo_race7"
+    ]
+}

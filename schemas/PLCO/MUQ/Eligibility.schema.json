@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/MUQ/Eligibility.schema.json",
+    "title": "Medical Use Questionnaire (MUQ) Eligibility",
+    "type": "object",
+    "properties": {
+        "entryage_muq": {
+            "type": [
+                "number",
+                "string"
+            ],
+            "title": "MUQ Analysis Entry Age",
+            "description": "Age at MUQ analysis entry.",
+            "enum": [
+                ".F"
+            ],
+            "enumDescriptions": [
+                "No Form"
+            ]
+        },
+        "entrydays_muq": {
+            "type": [
+                "number",
+                "string"
+            ],
+            "title": "MUQ Analysis Entry Days",
+            "description": "Days from the date of randomization until the participant has been randomized and completed the Baseline Questionnaire (BQ) and MUQ.",
+            "enum": [
+                ".F"
+            ],
+            "enumDescriptions": [
+                "No Form"
+            ]
+        },
+        "j_ph_any_muq": {
+            "type": "string",
+            "title": "MUQ Analysis Personal History of Any Cancer",
+            "description": "Did the participant have a personal history of any cancer prior to MUQ analysis entry?",
+            "enum": [
+                ".F",
+                "0",
+                "1",
+                "9"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "No",
+                "Yes",
+                "Unknown"
+            ]
+        }
+    },
+    "required": [
+        "entryage_muq",
+        "entrydays_muq",
+        "j_ph_any_muq"
+    ]
+}

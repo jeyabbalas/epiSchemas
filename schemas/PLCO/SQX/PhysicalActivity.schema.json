@@ -1,0 +1,694 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/SQX/PhysicalActivity.schema.json",
+    "title": "Supplemental Questionnaire (SQX) Physical Activity",
+    "type": "object",
+    "properties": {
+        "sqx_active": {
+            "type": "string",
+            "title": "Physical Activity 1+ time/month (SQX)",
+            "description": "Was the participant active at least one time per month in the past 12 months? Derived from question 31.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_active_comp": {
+            "type": "string",
+            "title": "Activeness Compared to 10 Years Ago (SQX)",
+            "description": "Question 40 - \"Compared with yourself 10 years ago, are you now more active, less active, or about the same?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "More Active",
+                "Less Active",
+                "About the Same"
+            ]
+        },
+        "sqx_aerobics": {
+            "type": "string",
+            "title": "Aerobics (SQX)",
+            "description": "Exercise by aerobics, water aerobics, or aerobic dancing. Question 31 - \"In the past 12 months did you do [aerobics, water aerobics, or aerobic dancing]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_aerobics_lev": {
+            "type": "string",
+            "title": "Aerobics - Frequency (SQX)",
+            "description": "Amount of exercise by aerobics, water aerobics, or aerobic dancing. Question 31 - \"In the past 12 months, how often did you do [aerobics, water aerobics or aerobic dancing]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No - Did Not Do",
+                "None or < 1 Time/Month",
+                "1-3 Times/Month",
+                "1-2 Times/Week",
+                "3-6 Times/Week",
+                "7+ Times/Week"
+            ]
+        },
+        "sqx_calisthen": {
+            "type": "string",
+            "title": "Calisthenics or Exercise (SQX)",
+            "description": "Amount of exercise by doing calisthenics. Question 31 - \"In the past 12 months did you do [calisthenics or exercise]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_calisthen_lev": {
+            "type": "string",
+            "title": "Calisthenics or Exercise - Frequency (SQX)",
+            "description": "Exercise by doing calisthenics. Question 31 - \"In the past 12 months, how often did you do [calisthenics or exercise]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No - Did Not Do",
+                "None or < 1 Time/Month",
+                "1-3 Times/Month",
+                "1-2 Times/Week",
+                "3-6 Times/Week",
+                "7+ Times/Week"
+            ]
+        },
+        "sqx_cycle": {
+            "type": "string",
+            "title": "Bicycle (SQX)",
+            "description": "Exercise by riding a bicycle or an exercise bicycle. Question 31 - \"In the past 12 months did you [ride a bicycle or an exercise bicycle]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_cycle_lev": {
+            "type": "string",
+            "title": "Bicycle - Frequency (SQX)",
+            "description": "Amount of exercise by riding a bicycle or an exercise bicycle. Question 31 - \"In the past 12 months, how often did you [ride a bicycle or an exercise bicycle]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No - Did Not Do",
+                "None or < 1 Time/Month",
+                "1-3 Times/Month",
+                "1-2 Times/Week",
+                "3-6 Times/Week",
+                "7+ Times/Week"
+            ]
+        },
+        "sqx_dance": {
+            "type": "string",
+            "title": "Dance (SQX)",
+            "description": "Exercise by other dancing. Question 31 - \"In the past 12 months did you do [other dancing]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_dance_lev": {
+            "type": "string",
+            "title": "Dance - Frequency (SQX)",
+            "description": "Amount of exercise by other dancing. Question 31 - \"In the past 12 months, how often did you do [other dancing]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No - Did Not Do",
+                "None or < 1 Time/Month",
+                "1-3 Times/Month",
+                "1-2 Times/Week",
+                "3-6 Times/Week",
+                "7+ Times/Week"
+            ]
+        },
+        "sqx_garden": {
+            "type": "string",
+            "title": "Garden (SQX)",
+            "description": "Exercise by gardening or doing yard work. Question 31 - \"In the past 12 months did you [garden or do yard work]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_garden_lev": {
+            "type": "string",
+            "title": "Garden - Frequency (SQX)",
+            "description": "Amount of exercise by gardening or doing yard work. Question 31 - \"In the past 12 months, how often did you do [garden or do yard work]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No - Did Not Do",
+                "None or < 1 Time/Month",
+                "1-3 Times/Month",
+                "1-2 Times/Week",
+                "3-6 Times/Week",
+                "7+ Times/Week"
+            ]
+        },
+        "sqx_housework": {
+            "type": "string",
+            "title": "Light Activity (SQX)",
+            "description": "Question 36 - \"Over the past 12 months, on average, how many hours per week did you spend doing light work around the house including preparing meals, cleaning, doing small repairs, washing dishes, etc?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "None or < 1 Hour/Week",
+                "Around 1 Hour/Week",
+                "2-3 Hours/Week",
+                "4-5 Hours/Week",
+                "6-7 Hours/Week",
+                "7+ Hours/Week"
+            ]
+        },
+        "sqx_jog": {
+            "type": "string",
+            "title": "Jog (SQX)",
+            "description": "Exercise by jogging or running outside or on a treadmill. Question 31 - \"In the past 12 months did you [jog or run outside or on a treadmill]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_jog_lev": {
+            "type": "string",
+            "title": "Jog - Frequency (SQX)",
+            "description": "Amount of exercise by jogging or running outside or on a treadmill. Question 31 - \"In the past 12 months, how often did you [jog or run outside or on a treadmill]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No - Did Not Do",
+                "None or < 1 Time/Month",
+                "1-3 Times/Month",
+                "1-2 Times/Week",
+                "3-6 Times/Week",
+                "7+ Times/Week"
+            ]
+        },
+        "sqx_lift_weights": {
+            "type": "string",
+            "title": "Lift Weights (SQX)",
+            "description": "Exercise by lifting weights. Question 31 - \"In the past 12 months did you [lift weights]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_lift_weights_lev": {
+            "type": "string",
+            "title": "Lift Weights - Frequency (SQX)",
+            "description": "Amount of exercise by lifting weights. Question 31 - \"In the past 12 months, how often did you [lift weights]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No - Did Not Do",
+                "None or < 1 Time/Month",
+                "1-3 Times/Month",
+                "1-2 Times/Week",
+                "3-6 Times/Week",
+                "7+ Times/Week"
+            ]
+        },
+        "sqx_moderate": {
+            "type": "string",
+            "title": "Moderate Activity (SQX)",
+            "description": "Question 34 - \"Over the last 12 months, on average, how many days per week did you spend in any moderate physical activity where you worked up a light sweat or increased your breathing and heart rate to moderately higher levels?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "None or < 1 Day/Week",
+                "2-3 Days/Week",
+                "4-5 Days/Week",
+                "6-7 Days/Week"
+            ]
+        },
+        "sqx_moderate_time": {
+            "type": "string",
+            "title": "Moderate Activity - Duration (SQX)",
+            "description": "Length of moderate activity session. Question 35 - \"Over the last 12 months, on average, how long was each session of moderate activity?\" Cleaned version of question 35 using questions 34 and 35.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "None or < 15 Minutes",
+                "16-19 Minutes",
+                "20-29 Minutes",
+                "30-39 Minutes",
+                "40+ Minutes"
+            ]
+        },
+        "sqx_pace": {
+            "type": "string",
+            "title": "Walking Pace (SQX)",
+            "description": "Question 37 - \"What is your usual walking pace?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Easy < 2 mph",
+                "Normal 2-2.9 mph",
+                "Brisk Pace 3-3.9 mph",
+                "Very Brisk 4+ mph",
+                "Unable to Walk"
+            ]
+        },
+        "sqx_shop": {
+            "type": "string",
+            "title": "Shopping or Other Activity (SQX)",
+            "description": "Question 39 - \"How often do you leave your home for shopping or other activities?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "None or < 1 Time/Week",
+                "1 Time/Week",
+                "2-4 Times/Week",
+                "5-6 Times/Week",
+                "7+ Times/Week"
+            ]
+        },
+        "sqx_stairs": {
+            "type": "string",
+            "title": "Flights of Stairs (SQX)",
+            "description": "Question 38 - \"How many flights of stairs do you usually climb daily?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No Flights",
+                "1-2 Flights",
+                "3-4 Flights",
+                "5-9 Flights",
+                "10+ Flights"
+            ]
+        },
+        "sqx_strenuous": {
+            "type": "string",
+            "title": "Strenuous Activity (SQX)",
+            "description": "Question 32 - \"Over the last 12 months, on average, how many days per week did you spend in any physical activity strenuous enough to work up a sweat or to increase your breathing and heart rate to very high levels?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "None or < 1 Day/Week",
+                "2-3 Days/Week",
+                "4-5 Days/Week",
+                "6-7 Days/Week"
+            ]
+        },
+        "sqx_strenuous_time": {
+            "type": "string",
+            "title": "Strenuous Activity - Duration (SQX)",
+            "description": "Length of strenuous activity session. Question 33 - \"Over the last 12 months, on average, how long was each session of strenuous activity?\" Cleaned version of question 33 using questions 32 and 33.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "None or < 15 Minutes",
+                "16-19 Minutes",
+                "20-29 Minutes",
+                "30-39 Minutes",
+                "40+ Minutes"
+            ]
+        },
+        "sqx_swim": {
+            "type": "string",
+            "title": "Swim (SQX)",
+            "description": "Exercise by swimming. Question 31 - \"In the past 12 months did you [swim]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_swim_lev": {
+            "type": "string",
+            "title": "Swim - Frequency (SQX)",
+            "description": "Amount of exercise by swimming. Question 31 - \"In the past 12 months, how often did you [swim]?\" Cleaned version of question 31 using other responses from question 31. Question 31 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No - Did Not Do",
+                "None or < 1 Time/Month",
+                "1-3 Times/Month",
+                "1-2 Times/Week",
+                "3-6 Times/Week",
+                "7+ Times/Week"
+            ]
+        },
+        "sqx_walk_mi": {
+            "type": "string",
+            "title": "Walk a Mile - Frequency (SQX)",
+            "description": "Question 30 - \"Not including any time at work, think about your activities over the past 12 months. How often did you walk a mile or more at a time without stopping?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "None or < 1 Time /Month",
+                "1-3 Times/Month",
+                "1-2 Times/Week",
+                "3-6 Times/Week",
+                "7+ Times/Week"
+            ]
+        },
+        "sqx_work_act": {
+            "type": "string",
+            "title": "Work Activity (SQX)",
+            "description": "Think about your activities at work over the past 12 months. Which of the following choices best describes your usual activities at work? Cleaned version of question 29 using questions 2 and 29.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Did Not Work",
+                "Mostly Sitting",
+                "Mostly Walking, Some Sitting",
+                "Mostly Walking with Some Manual Labor",
+                "Mostly Manual Labor"
+            ]
+        }
+    },
+    "required": [
+        "sqx_active",
+        "sqx_active_comp",
+        "sqx_aerobics",
+        "sqx_aerobics_lev",
+        "sqx_calisthen",
+        "sqx_calisthen_lev",
+        "sqx_cycle",
+        "sqx_cycle_lev",
+        "sqx_dance",
+        "sqx_dance_lev",
+        "sqx_garden",
+        "sqx_garden_lev",
+        "sqx_housework",
+        "sqx_jog",
+        "sqx_jog_lev",
+        "sqx_lift_weights",
+        "sqx_lift_weights_lev",
+        "sqx_moderate",
+        "sqx_moderate_time",
+        "sqx_pace",
+        "sqx_shop",
+        "sqx_stairs",
+        "sqx_strenuous",
+        "sqx_strenuous_time",
+        "sqx_swim",
+        "sqx_swim_lev",
+        "sqx_walk_mi",
+        "sqx_work_act"
+    ]
+}

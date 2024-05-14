@@ -1,0 +1,90 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/DQX/Eligibility.schema.json",
+    "title": "Dietary Questionnaire I-only (DQX) Eligibility",
+    "type": "object",
+    "properties": {
+        "entryage_dqx": {
+            "type": [
+                "number",
+                "string"
+            ],
+            "title": "DQX Analysis Entry Age",
+            "description": "Age at DQX analysis entry.",
+            "enum": [
+                ".F",
+                ".M"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Missing"
+            ]
+        },
+        "entrydays_dqx": {
+            "type": [
+                "number",
+                "string"
+            ],
+            "title": "DQX Analysis Entry Days",
+            "description": "Days from the date of randomization until participant has been randomized and completed the Baseline Questionnaire (BQ) and DQX.",
+            "enum": [
+                ".F",
+                ".M"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Missing"
+            ]
+        },
+        "j_fstcan_eligible_allowph_dqx": {
+            "type": "string",
+            "title": "DQX Eligible For First Cancer Within Trial (ALLOWPH) Analysis?",
+            "description": "Flagged participants must have completed a valid questionnaire, had no cancer diagnosed in the trial prior to the questionnaire, and had time at risk for their first cancer in the trial period following the questionnaire.",
+            "enum": [
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes"
+            ]
+        },
+        "j_fstcan_eligible_noph_dqx": {
+            "type": "string",
+            "title": "DQX Eligible For First Cancer Ever (NOPH) Analysis?",
+            "description": "Flagged participants must have completed a valid questionnaire, had no cancer prior to the trial or the questionnaire, and had time at risk for their first cancer following the questionnaire.",
+            "enum": [
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes"
+            ]
+        },
+        "j_ph_any_dqx": {
+            "type": "string",
+            "title": "DQX Analysis Personal History of Any Cancer",
+            "description": "Did the participant have a personal history of any cancer prior to DQX analysis entry?",
+            "enum": [
+                ".F",
+                "0",
+                "1",
+                "9"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "No",
+                "Yes",
+                "Unknown"
+            ]
+        }
+    },
+    "required": [
+        "entryage_dqx",
+        "entrydays_dqx",
+        "j_fstcan_eligible_allowph_dqx",
+        "j_fstcan_eligible_noph_dqx",
+        "j_ph_any_dqx"
+    ]
+}

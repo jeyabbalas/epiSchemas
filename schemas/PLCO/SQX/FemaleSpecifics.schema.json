@@ -1,0 +1,1212 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/SQX/FemaleSpecifics.schema.json",
+    "title": "Supplemental Questionnaire (SQX) Female Specifics",
+    "type": "object",
+    "properties": {
+        "sqx_actonel": {
+            "type": "string",
+            "title": "Actonel (SQX)",
+            "description": "Actonel use for any reason. Question 64- \"Did you ever take any of the following medications to strengthen your bones or for any other reason? [If you ever took:] Are you taking this medication now?\" Cleaned version of question 64 using other responses from question 64. Question 64 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "Former",
+                "Current",
+                "Took, Unknown if Current"
+            ]
+        },
+        "sqx_any_fmed": {
+            "type": "string",
+            "title": "Bone Strengthening Medications (SQX)",
+            "description": "Bone strengthening medication use status. Derived using question 64",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "Former",
+                "Current",
+                "Took, Unknown if Current"
+            ]
+        },
+        "sqx_bisphos": {
+            "type": "string",
+            "title": "Any Bisphosphonate (SQX)",
+            "description": "Status of bisphosphonate use. Derived using question 64",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "Former",
+                "Current",
+                "Took, Unknown if Current"
+            ]
+        },
+        "sqx_boniva": {
+            "type": "string",
+            "title": "Boniva (SQX)",
+            "description": "Boniva use for any reason. Question 64- \"Did you ever take any of the following medications to strengthen your bones or for any other reason? [If you ever took:] Are you taking this medication now?\" Cleaned version of question 64 using other responses from question 64. Question 64 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "Former",
+                "Current",
+                "Took, Unknown if Current"
+            ]
+        },
+        "sqx_breastfed": {
+            "type": "string",
+            "title": "Breast-Fed Duration (SQX)",
+            "description": "Total breast feeding duration. Question 61- \"In your lifetime, how many total months have you breast-fed?\" Cleaned version of Question 61 aligning Question 61 with information from the Baseline Questionnaire (BQ).",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "None or Never Pregnant",
+                "< 6 Months",
+                "6-11 Months",
+                "12-35 Months",
+                "36+ Months"
+            ]
+        },
+        "sqx_brst_biop": {
+            "type": "string",
+            "title": "Breast Biopsy (SQX)",
+            "description": "Breast biopsy indicator. Question 65- \"Did you ever have a breast biopsy?\" Cleaned version of question 65 using other responses from question 65. Question 65 has multiple parts and cleaned variables.",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_brst_biopa": {
+            "type": "string",
+            "title": "Age of Breast Biopsy (SQX)",
+            "description": "Breast biopsy age. Question 65- \"If [you had a breast biopsy] at what age was your most recent one?\" Cleaned version of question 65 using other responses from question 65. Question 65 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "< 30",
+                "30-39",
+                "40-49",
+                "50-59",
+                "60-69",
+                "70+"
+            ]
+        },
+        "sqx_brst_biopnum": {
+            "type": "string",
+            "title": "# of Breast Biopsies (SQX)",
+            "description": "Count of breast biopsies. Question 65- \"If [you had a breast biopsy] how many have you had?\" Cleaned version of question 65 using other responses from question 65. Question 65 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "None",
+                "1",
+                "2",
+                "3 or More"
+            ]
+        },
+        "sqx_didronel": {
+            "type": "string",
+            "title": "Didronel (SQX)",
+            "description": "Didronel use for any reason. Question 64- \"Did you ever take any of the following medications to strengthen your bones or for any other reason? [If you ever took:] Are you taking this medication now?\" Cleaned version of question 64 using other responses from question 64. Question 64 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "Former",
+                "Current",
+                "Took, Unknown if Current"
+            ]
+        },
+        "sqx_evista": {
+            "type": "string",
+            "title": "Evista (SQX)",
+            "description": "Evista use for any reason. Question 64- \"Did you ever take any of the following medications to strengthen your bones or for any other reason? [If you ever took:] Are you taking this medication now?\" Cleaned version of question 64 using other responses from question 64. Question 64 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "Former",
+                "Current",
+                "Took, Unknown if Current"
+            ]
+        },
+        "sqx_forteo": {
+            "type": "string",
+            "title": "Forteo (SQX)",
+            "description": "Forteo use for any reason. Question 64- \"Did you ever take any of the following medications to strengthen your bones or for any other reason? [If you ever took:] Are you taking this medication now?\" Cleaned version of question 64 using other responses from question 64. Question 64 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "Former",
+                "Current",
+                "Took, Unknown if Current"
+            ]
+        },
+        "sqx_fosamax": {
+            "type": "string",
+            "title": "Fosamax (SQX)",
+            "description": "Fosamax use for any reason. Question 64- \"Did you ever take any of the following medications to strengthen your bones or for any other reason? [If you ever took:] Are you taking this medication now?\" Cleaned version of question 64 using other responses from question 64. Question 64 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "Former",
+                "Current",
+                "Took, Unknown if Current"
+            ]
+        },
+        "sqx_mammo": {
+            "type": "string",
+            "title": "Last Mammogram (SQX)",
+            "description": "Question 63- \"When did you have your last mammogram?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "< 1 Year Ago",
+                "1 Year Ago",
+                "2-3 Years Ago",
+                "4+ Years Ago"
+            ]
+        },
+        "sqx_miacalcin": {
+            "type": "string",
+            "title": "Miacalcin (SQX)",
+            "description": "Miacalcin use for any reason. Question 64- \"Did you ever take any of the following medications to strengthen your bones or for any other reason? [If you ever took:] Are you taking this medication now?\" Cleaned version of question 64 using other responses from question 64. Question 64 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "Former",
+                "Current",
+                "Took, Unknown if Current"
+            ]
+        },
+        "sqx_nolvadex": {
+            "type": "string",
+            "title": "Nolvadex (SQX)",
+            "description": "Nolvadex use for any reason. Question 64- \"Did you ever take any of the following medications to strengthen your bones or for any other reason? [If you ever took:] Are you taking this medication now?\" Cleaned version of question 64 using other responses from question 64. Question 64 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "Former",
+                "Current",
+                "Took, Unknown if Current"
+            ]
+        },
+        "sqx_papsmear": {
+            "type": "string",
+            "title": "Last Pap Smear (SQX)",
+            "description": "Question 62- \"When did you have your last pap smear?\" Unedited",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never",
+                "< 1 Year Ago",
+                "1 Year Ago",
+                "2-3 Years Ago",
+                "4+ Years Ago"
+            ]
+        },
+        "sqx_twins": {
+            "type": "string",
+            "title": "Pregnant with Multiple Babies (SQX)",
+            "description": "During any of your pregnancies, were you carrying more than one baby (twins, triplets, etc.)? Cleaned version of Question 60 aligning Question 60 with information from the BQ.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Not Applicable - Never Pregnant",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_HRT": {
+            "type": "string",
+            "title": "Ever Taken hormone replacement therapy (HRT) (SQX + BQ)",
+            "description": "HRT use indicator. Question 68- \"Have you ever taken HRT?\" Cleaned version of question 68 using questions 68-73 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_HRT2curr": {
+            "type": "string",
+            "title": "Still Taking 2nd hormone replacement therapy (HRT) (SQX + BQ)",
+            "description": "Status of second HRT/ Question 73- \"Are you still taking this type of HRT?\" Cleaned version of question 73 using question 68-73 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_HRT_age": {
+            "type": "string",
+            "title": "Age Started Taking hormone replacement therapy (HRT) (SQX + BQ)",
+            "description": "Age began HRT. Question 69- \"At about what age did you first begin taking HRT? \" Cleaned version of question 69 using questions 68-73 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous.",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Out of Range"
+            ]
+        },
+        "sqxbq_HRT_agestop": {
+            "type": "string",
+            "title": "Age Stopped hormone replacement therapy (HRT) (SQX + BQ)",
+            "description": "Age stopped HRT. Question 71- \"At what age did you stop taking this type of HRT?\" Cleaned version of question 71 using question 68-73 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 71 has multiple parts and cleaned variables.",
+            "enum": [
+                "Numeric",
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Out of Range"
+            ]
+        },
+        "sqxbq_HRT_ageswitch": {
+            "type": "string",
+            "title": "Age Switched hormone replacement therapy (HRT) (SQX + BQ)",
+            "description": "Age switched HRT. Question 71- \"At what age did you switch taking this type of HRT?\" Cleaned version of question 71 using question 68-73 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 71 has multiple parts and cleaned variables.",
+            "enum": [
+                "Numeric",
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Out of Range"
+            ]
+        },
+        "sqxbq_HRT_chng": {
+            "type": "string",
+            "title": "HRT Change (SQX + BQ)",
+            "description": "Status of first HRT. Question 71- \"Are you still taking this type of HRT or did you stop, or switch types?\" Cleaned version of question 71 using question 68-73 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 71 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Still Taking",
+                "Stopped",
+                "Switched"
+            ]
+        },
+        "sqxbq_HRT_status": {
+            "type": "string",
+            "title": "Hormone replacement therapy (HRT) Status (SQX + BQ)",
+            "description": "Current HRT status. Derived using questions 68-73 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "9"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never took HRT",
+                "Current HRT",
+                "Former HRT",
+                "Took HRT - Unknown if Current"
+            ]
+        },
+        "sqxbq_HRT_type1": {
+            "type": "string",
+            "title": "Type of hormone replacement therapy (HRT) (SQX + BQ)",
+            "description": "Type of first HRT. Question 70- \"What type of HRT did you take when you first began HRT?\" Cleaned version of question 70 using questions 68-73 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Estrogen Only Pills",
+                "Progesterone/Progestin Pills",
+                "Estrogen+Progesterone Pills",
+                "Estrogen Creams, etc.",
+                "Progesterone Creams, etc.",
+                "Estrogen+Progesterone Creams, etc.",
+                "Not Sure"
+            ]
+        },
+        "sqxbq_HRT_type2": {
+            "type": "string",
+            "title": "Type of 2nd hormone replacement therapy (HRT) (SQX + BQ)",
+            "description": "Second HRT type. Question 72- \"When you switched, what type of HRT did you switch to?\" Cleaned version of question 72 using question 68-73 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Estrogen Only Pills",
+                "Progesterone/Progestin Pills",
+                "Estrogen+Progesterone Pills",
+                "Estrogen Creams, etc.",
+                "Progesterone Creams, etc.",
+                "Estrogen+Progesterone Creams, etc.",
+                "Not Sure"
+            ]
+        },
+        "sqxbq_hyster": {
+            "type": "string",
+            "title": "Ever Have a Hysterectomy (SQX + BQ)",
+            "description": "Hysterectomy status. Question 67- \"Have you ever had a hysterectomy, that is, have you ever had your uterus or womb removed?\" Cleaned version of question 67 using other responses from question 67 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 67 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_hystera": {
+            "type": "string",
+            "title": "Age of Hysterectomy (SQX + BQ)",
+            "description": "Age at hysterectomy. Question 67- \"If [you have had a hysterectomy] at what age was your hysterectomy?\" Cleaned version of question 67 using other responses from question 67 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 67 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "< 40",
+                "40-44",
+                "45-49",
+                "50-54",
+                "55-59",
+                "60-69",
+                "70-79",
+                "80+"
+            ]
+        },
+        "sqxbq_ovaries": {
+            "type": "string",
+            "title": "Ever Have Ovaries Removed (SQX + BQ)",
+            "description": "Has the participant ever had any portion of ovaries removed? Cleaned version of question 66 using other responses from question 66 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 66 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_ovariesa": {
+            "type": "string",
+            "title": "Age of Ovary Removal (SQX + BQ)",
+            "description": "Age at ovary removal. Question 66- \"If [you have had an ovary removed] at what age was the most recent ovary removal?\" Cleaned version of question 66 using other responses from question 66 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 66 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "< 40",
+                "40-44",
+                "45-49",
+                "50-54",
+                "55-59",
+                "60-69",
+                "70-79",
+                "80+"
+            ]
+        },
+        "sqxbq_ovariesr": {
+            "type": "string",
+            "title": "Removed Ovaries (SQX + BQ)",
+            "description": "Ovary removal status. Question 66- \"Have you ever had an ovary removed? If so what was removed?\" Cleaned version of question 66 using other responses from question 66 and aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 66 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Both Ovaries",
+                "One Ovary",
+                "Partial Removal of an Ovary",
+                "Not Sure"
+            ]
+        },
+        "sqxo_HRT": {
+            "type": "string",
+            "title": "Ever Taken hormone replacement therapy (HRT) (SQX)",
+            "description": "HRT use indicator. Question 68- \"Have you ever taken HRT?\" Cleaned version of question 68 using questions 68-73.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxo_HRT2curr": {
+            "type": "string",
+            "title": "Still Taking 2nd hormone replacement therapy (HRT) (SQX)",
+            "description": "Status of second HRT. Question 73- \"Are you still taking this type of HRT?\" Cleaned version of question 71 using question 68-73.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxo_HRT_age": {
+            "type": "string",
+            "title": "Age Started Taking hormone replacement therapy (HRT) (SQX)",
+            "description": "Age began HRT. Question 69- \"At about what age did you first begin taking HRT?\" Cleaned version of question 69 using questions 68-73.",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Out of Range"
+            ]
+        },
+        "sqxo_HRT_agestop": {
+            "type": "string",
+            "title": "Age Stopped hormone replacement therapy (HRT) (SQX)",
+            "description": "Age stopped HRT. Question 71- \"At what age did you stop taking this type of HRT?\" Cleaned version of question 71 using question 68-73. Question 71 has multiple parts and cleaned variables.",
+            "enum": [
+                "Numeric",
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Out of Range"
+            ]
+        },
+        "sqxo_HRT_ageswitch": {
+            "type": "string",
+            "title": "Age Switched hormone replacement therapy (HRT) (SQX)",
+            "description": "Age switched HRT. Question 71- \"At what age did you switch taking this type of HRT?\" Cleaned version of question 71 using question 68-73. Question 71 has multiple parts and cleaned variables.",
+            "enum": [
+                "Numeric",
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Out of Range"
+            ]
+        },
+        "sqxo_HRT_chng": {
+            "type": "string",
+            "title": "Hormone replacement therapy (HRT) Change (SQX)",
+            "description": "Status of first HRT. Question 71- \"Are you still taking this type of HRT or did you stop, or switch types?\" Cleaned version of question 71 using question 68-73. Question 71 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Still Taking",
+                "Stopped",
+                "Switched"
+            ]
+        },
+        "sqxo_HRT_status": {
+            "type": "string",
+            "title": "Hormone replacement therapy (HRT) Status (SQX)",
+            "description": "Current HRT status. Derived using question 68-73.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "9"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "Never took HRT",
+                "Current HRT",
+                "Former HRT",
+                "Took HRT - Unknown if Current"
+            ]
+        },
+        "sqxo_HRT_type1": {
+            "type": "string",
+            "title": "Type of hormone replacement therapy (HRT) (SQX)",
+            "description": "Type of first HRT. Question 70- \"What type of HRT did you take when you first began HRT?\" Cleaned version of question 70 using questions 68-73.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Estrogen Only Pills",
+                "Progesterone/Progestin Pills",
+                "Estrogen+Progesterone Pills",
+                "Estrogen Creams, etc.",
+                "Progesterone Creams, etc.",
+                "Estrogen+Progesterone Creams, etc.",
+                "Not Sure"
+            ]
+        },
+        "sqxo_HRT_type2": {
+            "type": "string",
+            "title": "Type of 2nd hormone replacement therapy (HRT) (SQX)",
+            "description": "Second HRT type. Question 72- \"When you switched, what type of HRT did you switch to?\" Cleaned version of question 72 using question 68-73",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Estrogen Only Pills",
+                "Progesterone/Progestin Pills",
+                "Estrogen+Progesterone Pills",
+                "Estrogen Creams, etc.",
+                "Progesterone Creams, etc.",
+                "Estrogen+Progesterone Creams, etc.",
+                "Not Sure"
+            ]
+        },
+        "sqxo_hyster": {
+            "type": "string",
+            "title": "Ever Have a Hysterectomy (SQX)",
+            "description": "Hysterectomy status. Question 67- \"Have you ever had a hysterectomy, that is, have you ever had your uterus or womb removed?\" Cleaned version of question 67 using other responses from question 67. Question 67 has multiple parts and cleaned variables.",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxo_hystera": {
+            "type": "string",
+            "title": "Age of Hysterectomy (SQX)",
+            "description": "Age at hysterectomy. Question 67- \"If [you have had a hysterectomy] at what age was your hysterectomy?\" Cleaned version of question 67 using other responses from question 67. Question 67 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "< 40",
+                "40-44",
+                "45-49",
+                "50-54",
+                "55-59",
+                "60-69",
+                "70-79",
+                "80+"
+            ]
+        },
+        "sqxo_ovaries": {
+            "type": "string",
+            "title": "Ever Have Ovaries Removed (SQX)",
+            "description": "Has the participant ever had any portion of ovaries removed? Cleaned version of question 66 using other responses from question 66. Question 66 has multiple parts and cleaned variables.",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxo_ovariesa": {
+            "type": "string",
+            "title": "Age of Ovary Removal (SQX)",
+            "description": "Age at ovary removal. Question 66- \"If [you have had an ovary removed] at what age was the most recent ovary removal? \" Cleaned version of question 66 using other responses from question 66. Question 66 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "< 40",
+                "40-44",
+                "45-49",
+                "50-54",
+                "55-59",
+                "60-69",
+                "70-79",
+                "80+"
+            ]
+        },
+        "sqxo_ovariesr": {
+            "type": "string",
+            "title": "Removed Ovaries (SQX)",
+            "description": "Ovary removal Status. Question 66- \"Have you ever had an ovary removed? If so what was removed? \" Cleaned version of question 66 using other responses from question 66. Question 66 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Wrong Gender",
+                "Blank",
+                "N/A",
+                "Both Ovaries",
+                "One Ovary",
+                "Partial Removal of an Ovary",
+                "Not Sure"
+            ]
+        }
+    },
+    "required": [
+        "sqx_actonel",
+        "sqx_any_fmed",
+        "sqx_bisphos",
+        "sqx_boniva",
+        "sqx_breastfed",
+        "sqx_brst_biop",
+        "sqx_brst_biopa",
+        "sqx_brst_biopnum",
+        "sqx_didronel",
+        "sqx_evista",
+        "sqx_forteo",
+        "sqx_fosamax",
+        "sqx_mammo",
+        "sqx_miacalcin",
+        "sqx_nolvadex",
+        "sqx_papsmear",
+        "sqx_twins",
+        "sqxbq_HRT",
+        "sqxbq_HRT2curr",
+        "sqxbq_HRT_age",
+        "sqxbq_HRT_agestop",
+        "sqxbq_HRT_ageswitch",
+        "sqxbq_HRT_chng",
+        "sqxbq_HRT_status",
+        "sqxbq_HRT_type1",
+        "sqxbq_HRT_type2",
+        "sqxbq_hyster",
+        "sqxbq_hystera",
+        "sqxbq_ovaries",
+        "sqxbq_ovariesa",
+        "sqxbq_ovariesr",
+        "sqxo_HRT",
+        "sqxo_HRT2curr",
+        "sqxo_HRT_age",
+        "sqxo_HRT_agestop",
+        "sqxo_HRT_ageswitch",
+        "sqxo_HRT_chng",
+        "sqxo_HRT_status",
+        "sqxo_HRT_type1",
+        "sqxo_HRT_type2",
+        "sqxo_hyster",
+        "sqxo_hystera",
+        "sqxo_ovaries",
+        "sqxo_ovariesa",
+        "sqxo_ovariesr"
+    ]
+}

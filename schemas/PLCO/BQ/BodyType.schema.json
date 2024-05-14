@@ -1,0 +1,250 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/BQ/BodyType.schema.json",
+    "title": "Baseline Questionnaire (BQ) Body Type",
+    "type": "object",
+    "properties": {
+        "bmi_20": {
+            "type": "string",
+            "title": "Body mass index (BMI) at Age 20",
+            "description": "BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "oneOf": [
+                {
+                    "type": "number",
+                    "minimum": 15
+                },
+                {
+                    "enum": [
+                        ".F",
+                        ".M",
+                        ".R"
+                    ],
+                    "enumDescriptions": [
+                        "No Form",
+                        "Not Answered",
+                        "Height Or Weight Not In Reasonable Range"
+                    ]
+                }
+            ]
+        },
+        "bmi_20c": {
+            "type": "string",
+            "title": "Body mass index (BMI) at Age 20",
+            "description": "This is the World Health Organization (WHO) standard categorization of BMI. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                ".F",
+                ".M",
+                ".R",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Height Or Weight Not In Reasonable Range",
+                "0-18.5",
+                "18.5-25",
+                "25-30",
+                "30+"
+            ]
+        },
+        "bmi_50": {
+            "type": "string",
+            "title": "Body mass index (BMI) at Age 50",
+            "description": "BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "oneOf": [
+                {
+                    "type": "number",
+                    "minimum": 15
+                },
+                {
+                    "enum": [
+                        ".F",
+                        ".M",
+                        ".R"
+                    ],
+                    "enumDescriptions": [
+                        "No Form",
+                        "Not Answered",
+                        "Height Or Weight Not In Reasonable Range"
+                    ]
+                }
+            ]
+        },
+        "bmi_50c": {
+            "type": "string",
+            "title": "Body mass index (BMI) at Age 50",
+            "description": "This is the World Health Organization (WHO) standard categorization of BMI. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                ".F",
+                ".M",
+                ".R",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Height Or Weight Not In Reasonable Range",
+                "0-18.5",
+                "18.5-25",
+                "25-30",
+                "30+"
+            ]
+        },
+        "bmi_curc": {
+            "type": "string",
+            "title": "Body mass index (BMI) at Baseline",
+            "description": "This is the World Health Organization (WHO) standard categorization of BMI. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                ".F",
+                ".M",
+                ".R",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Height Or Weight Not In Reasonable Range",
+                "0-18.5",
+                "18.5-25",
+                "25-30",
+                "30+"
+            ]
+        },
+        "bmi_curr": {
+            "type": "string",
+            "title": "Body mass index (BMI) at Baseline",
+            "description": "BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "oneOf": [
+                {
+                    "type": "number",
+                    "minimum": 15
+                },
+                {
+                    "enum": [
+                        ".F",
+                        ".M",
+                        ".R"
+                    ],
+                    "enumDescriptions": [
+                        "No Form",
+                        "Not Answered",
+                        "Height Or Weight Not In Reasonable Range"
+                    ]
+                }
+            ]
+        },
+        "height_f": {
+            "type": "string",
+            "title": "Height (inches)",
+            "description": "Question 23 - \"How tall are you?\" Height is considered out of range if any of the following occur: - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After Body mass index (BMI) is calculated, BMI is less than 15",
+            "oneOf": [
+                {
+                    "type": "number",
+                    "minimum": 48
+                },
+                {
+                    "enum": [
+                        ".F",
+                        ".M",
+                        ".R"
+                    ],
+                    "enumDescriptions": [
+                        "No Form",
+                        "Missing",
+                        "Height Out Of Range"
+                    ]
+                }
+            ]
+        },
+        "weight20_f": {
+            "type": "string",
+            "title": "Weight at Age 20 (lbs)",
+            "description": "Question 22 - \"What is or was your weight at these ages?\" Weights less than 60 pounds are out of range.",
+            "oneOf": [
+                {
+                    "type": "number",
+                    "minimum": 60
+                },
+                {
+                    "enum": [
+                        ".F",
+                        ".M",
+                        ".R"
+                    ],
+                    "enumDescriptions": [
+                        "No Form",
+                        "Missing",
+                        "Weight Out Of Range"
+                    ]
+                }
+            ]
+        },
+        "weight50_f": {
+            "type": "string",
+            "title": "Weight at Age 50 (lbs)",
+            "description": "Question 22 - \"What is or was your weight at these ages?\" Weights less than 60 pounds are out of range.",
+            "oneOf": [
+                {
+                    "type": "number",
+                    "minimum": 60
+                },
+                {
+                    "enum": [
+                        ".F",
+                        ".M",
+                        ".R"
+                    ],
+                    "enumDescriptions": [
+                        "No Form",
+                        "Missing",
+                        "Weight Out Of Range"
+                    ]
+                }
+            ]
+        },
+        "weight_f": {
+            "type": "string",
+            "title": "Weight (lbs) at Baseline",
+            "description": "Question 22 - \"What is or was your weight at these ages?\" Weights less than 60 pounds are out of range.",
+            "oneOf": [
+                {
+                    "type": "number",
+                    "minimum": 60
+                },
+                {
+                    "enum": [
+                        ".F",
+                        ".M",
+                        ".R"
+                    ],
+                    "enumDescriptions": [
+                        "No Form",
+                        "Missing",
+                        "Weight Out Of Range"
+                    ]
+                }
+            ]
+        }
+    },
+    "required": [
+        "bmi_20",
+        "bmi_20c",
+        "bmi_50",
+        "bmi_50c",
+        "bmi_curc",
+        "bmi_curr",
+        "height_f",
+        "weight20_f",
+        "weight50_f",
+        "weight_f"
+    ]
+}

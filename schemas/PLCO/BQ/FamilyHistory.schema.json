@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/BQ/FamilyHistory.schema.json",
+    "title": "Baseline Questionnaire (BQ) Family History",
+    "type": "object",
+    "properties": {
+        "brothers": {
+            "type": "string",
+            "title": "# of Brothers",
+            "description": "Question 19 - \"How many full and half-brothers do you have, both living and deceased?\" Participants who have more than seven brothers are collapsed into \"7 or more.\"",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "None",
+                "One",
+                "Two",
+                "Three",
+                "Four",
+                "Five",
+                "Six",
+                "Seven Or More"
+            ]
+        },
+        "fh_cancer": {
+            "type": "string",
+            "title": "Has Family History of Any Cancer?",
+            "description": "Any first-degree relative with cancer. Basal cell skin cancers are not included. First-degree relatives include parents, full-siblings, and children. Half-siblings are not included.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        }
+    },
+    "required": [
+        "brothers",
+        "fh_cancer"
+    ]
+}

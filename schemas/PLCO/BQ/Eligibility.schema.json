@@ -1,0 +1,104 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/BQ/Eligibility.schema.json",
+    "title": "Baseline Questionnaire (BQ) Eligibility",
+    "type": "object",
+    "properties": {
+        "entryage_bq": {
+            "type": [
+                "number",
+                "string"
+            ],
+            "title": "BQ Analysis Entry Age",
+            "description": "Age at BQ analysis entry.",
+            "oneOf": [
+                {
+                    "type": "number",
+                    "description": "Numeric value representing age."
+                },
+                {
+                    "type": "string",
+                    "enum": [
+                        ".F"
+                    ],
+                    "enumDescriptions": [
+                        "No Form"
+                    ]
+                }
+            ]
+        },
+        "entrydays_bq": {
+            "type": [
+                "number",
+                "string"
+            ],
+            "title": "BQ Analysis Entry Days",
+            "description": "Days from the date of randomization until the participant has been randomized and completed the BQ.",
+            "oneOf": [
+                {
+                    "type": "number",
+                    "description": "Numeric value representing days."
+                },
+                {
+                    "type": "string",
+                    "enum": [
+                        ".F"
+                    ],
+                    "enumDescriptions": [
+                        "No Form"
+                    ]
+                }
+            ]
+        },
+        "j_fstcan_eligible_allowph_bq": {
+            "type": "string",
+            "title": "BQ Eligible For First Cancer Within Trial (ALLOWPH) Analysis?",
+            "description": "Flagged participants must have completed a valid questionnaire, had no cancer diagnosed in the trial prior to the questionnaire, and had time at risk for their first cancer in the trial period following the questionnaire.",
+            "enum": [
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes"
+            ]
+        },
+        "j_fstcan_eligible_noph_bq": {
+            "type": "string",
+            "title": "BQ Eligible For First Cancer Ever (NOPH) Analysis?",
+            "description": "Flagged participants must have completed a valid questionnaire, had no cancer prior to the trial or the questionnaire, and had time at risk for their first cancer following the questionnaire.",
+            "enum": [
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes"
+            ]
+        },
+        "j_ph_any_bq": {
+            "type": "string",
+            "title": "BQ Analysis Personal History of Any Cancer",
+            "description": "Did the participant have a personal history of any cancer prior to BQ analysis entry?",
+            "enum": [
+                ".F",
+                "0",
+                "1",
+                "9"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "No",
+                "Yes",
+                "Unknown"
+            ]
+        }
+    },
+    "required": [
+        "entryage_bq",
+        "entrydays_bq",
+        "j_fstcan_eligible_allowph_bq",
+        "j_fstcan_eligible_noph_bq",
+        "j_ph_any_bq"
+    ]
+}

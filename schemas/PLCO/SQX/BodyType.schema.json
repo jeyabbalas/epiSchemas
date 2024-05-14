@@ -1,0 +1,516 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/SQX/BodyType.schema.json",
+    "title": "Supplemental Questionnaire (SQX) Body Type",
+    "type": "object",
+    "properties": {
+        "sqx_bmi30s": {
+            "type": "string",
+            "title": "Body mass index (BMI) in 30's (SQX)",
+            "description": "BMI in the participant's 30s. Derived using questions 7 and 8. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "Out of Range"
+            ]
+        },
+        "sqx_bmi30sc": {
+            "type": "string",
+            "title": "Body mass index (BMI) in 30's (SQX)",
+            "description": "BMI in the participant's 30s. Derived using questions 7 and 8. This is the World Health Organization (WHO) standard categorization of BMI. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                ".F",
+                ".M",
+                ".R",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "Height or Weight not in Reasonable Range",
+                "0-18.5",
+                "> 18.5-25",
+                "> 25-30",
+                "> 30"
+            ]
+        },
+        "sqx_bmi40s": {
+            "type": "string",
+            "title": "Body mass index (BMI) in 40's (SQX)",
+            "description": "BMI in the participant's 40s. Derived using questions 7 and 8. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "Out of Range"
+            ]
+        },
+        "sqx_bmi40sc": {
+            "type": "string",
+            "title": "Body mass index (BMI) in 40's (SQX)",
+            "description": "BMI in the participant's 40s. Derived using questions 7 and 8. This is the World Health Organization (WHO) standard categorization of BMI. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                ".F",
+                ".M",
+                ".R",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "Height or Weight not in Reasonable Range",
+                "0-18.5",
+                "> 18.5-25",
+                "> 25-30",
+                "> 30"
+            ]
+        },
+        "sqx_bmi50s": {
+            "type": "string",
+            "title": "Body mass index (BMI) in 50's (SQX)",
+            "description": "BMI in the participant's 50s. Derived using questions 7 and 8. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "Out of Range"
+            ]
+        },
+        "sqx_bmi50sc": {
+            "type": "string",
+            "title": "Body mass index (BMI) in 50's (SQX)",
+            "description": "BMI in the participant's 50s. Derived using questions 7 and 8. This is the World Health Organization (WHO) standard categorization of BMI. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                ".F",
+                ".M",
+                ".R",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "Height or Weight not in Reasonable Range",
+                "0-18.5",
+                "> 18.5-25",
+                "> 25-30",
+                "> 30"
+            ]
+        },
+        "sqx_bmi60s": {
+            "type": "string",
+            "title": "Body mass index (BMI) in 60's (SQX)",
+            "description": "BMI in the participant's 60s. Derived using questions 7 and 8. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "N/A - Has not Reached this Age",
+                "Out of Range"
+            ]
+        },
+        "sqx_bmi60sc": {
+            "type": "string",
+            "title": "Body mass index (BMI) in 60's (SQX)",
+            "description": "BMI in the participant's 60s. Derived using questions 7 and 8. This is the World Health Organization (WHO) standard categorization of BMI. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                ".F",
+                ".M",
+                ".N",
+                ".R",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "N/A - Has not Reached this Age",
+                "Height or Weight not in Reasonable Range",
+                "0-18.5",
+                "> 18.5-25",
+                "> 25-30",
+                "> 30"
+            ]
+        },
+        "sqx_bmi70s": {
+            "type": "string",
+            "title": "Body mass index (BMI) in 70's (SQX)",
+            "description": "BMI in the participant's 70s. Derived using questions 7 and 8. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "N/A - Has not Reached this Age",
+                "Out of Range"
+            ]
+        },
+        "sqx_bmi70sc": {
+            "type": "string",
+            "title": "BMI in 70's (SQX)",
+            "description": "BMI in the participant's 70s. Derived using questions 7 and 8. This is the World Health Organization (WHO) standard categorization of BMI. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                ".F",
+                ".M",
+                ".N",
+                ".R",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "N/A - Has not Reached this Age",
+                "Height or Weight not in Reasonable Range",
+                "0-18.5",
+                "> 18.5-25",
+                "> 25-30",
+                "> 30"
+            ]
+        },
+        "sqx_bmi_curc": {
+            "type": "string",
+            "title": "Body mass index (BMI) (SQX)",
+            "description": "Current BMI. Derived using questions 7 and 9. This is the World Health Organization (WHO) standard categorization of BMI. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                ".F",
+                ".M",
+                ".R",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "Height or Weight not in Reasonable Range",
+                "0-18.5",
+                "> 18.5-25",
+                "> 25-30",
+                "> 30"
+            ]
+        },
+        "sqx_bmi_curr": {
+            "type": "string",
+            "title": "Body mass index (BMI) (SQX)",
+            "description": "Current BMI. Derived using questions 7 and 9. BMI is considered out of range if any of the following occur: - Weight is less than 60 pounds - Height is less than 48 inches - Height is greater than 78 inches for females - Height is greater than 84 inches for males - After BMI is calculated, BMI is less than 15",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "Out of Range"
+            ]
+        },
+        "sqx_gain_area": {
+            "type": "string",
+            "title": "Weight Gain Area (SQX)",
+            "description": "Question 10 - \"When you gain weight, where do you mainly tend to add the weight?\" Unedited.",
+            "enum": [
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "8"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Blank",
+                "Don't Gain Weight",
+                "Around Chest and Shoulders",
+                "Around Waist and Stomach",
+                "Around Hips and Thighs",
+                "Equally All Over",
+                "Other (Specify)",
+                "Multiple Areas"
+            ]
+        },
+        "sqx_height": {
+            "type": "string",
+            "title": "Height (in) (SQX)",
+            "description": "What is your current height? Cleaned version of question 7 using questions 7, 8, and 9. Heights less than 48 inches are out of range. For female participants, heights greater than 78 inches are out of range and for male participants, heights greater than 84 inches are out of range. BMIs less than 15 are considered out of range.",
+            "enum": [
+                "Numeric",
+                ".A",
+                ".F",
+                ".M",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Out of Range"
+            ]
+        },
+        "sqx_lose_area": {
+            "type": "string",
+            "title": "Weight Loss Area (SQX)",
+            "description": "Question 11 - \"When you are trying to slim down, where is it most difficult to lose weight?\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Don't Try to Lose Weight",
+                "Can't Lose Weight",
+                "Around Chest and Shoulders",
+                "Around Waist and Stomach",
+                "Around Hips and Thighs",
+                "Equally All Over",
+                "Other (Specify)"
+            ]
+        },
+        "sqx_sit_ht": {
+            "type": "string",
+            "title": "Height When Sitting (SQX)",
+            "description": "Question 12 - \"Compared to other people of the same sex and height, when sitting, are you. . .\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Especially Tall",
+                "Somewhat Tall",
+                "Typical",
+                "Somewhat Short",
+                "Especially Short"
+            ]
+        },
+        "sqx_waist_hip": {
+            "type": "string",
+            "title": "Waist-Hip Comparison (SQX)",
+            "description": "Question 13 - \"How would you describe your waist in comparison to your hips (waist to hip ratio)?\" Unedited.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Waist much Smaller than Hips",
+                "Waist Somewhat Smaller than Hips",
+                "Waist Similar to Hips",
+                "Waist Somewhat Larger than Hips",
+                "Waist much Larger than Hips"
+            ]
+        },
+        "sqx_wt30s": {
+            "type": "string",
+            "title": "Weight (lbs) in 30's (SQX)",
+            "description": "Weight in the participant's 30s. Question 8 - \"Please estimate your weight when you were [in your 30s]. (Exclude any periods when you were pregnant).\" Cleaned version of question 8 using questions 7 and 8. Weights less than 60 pounds and BMI values less than 15 are out of range.",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "Out of Range"
+            ]
+        },
+        "sqx_wt40s": {
+            "type": "string",
+            "title": "Weight (lbs) in 40's (SQX)",
+            "description": "Weight in the participant's 40s. Question 8 - \"Please estimate your weight when you were [in your 40s]. (Exclude any periods when you were pregnant).\" Cleaned version of question 8 using questions 7 and 8. Weights less than 60 pounds and BMI values less than 15 are out of range.",
+            "enum": [
+                "Numeric",
+                ".A",
+                ".F",
+                ".M",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Out of Range"
+            ]
+        },
+        "sqx_wt50s": {
+            "type": "string",
+            "title": "Weight (lbs) in 50's (SQX)",
+            "description": "Weight in the participant's 50s. Question 8 - \"Please estimate your weight when you were [in your 50s]. (Exclude any periods when you were pregnant).\" Cleaned version of question 8 using questions 7 and 8. Weights less than 60 pounds and BMI values less than 15 are out of range.",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "Out of Range"
+            ]
+        },
+        "sqx_wt60s": {
+            "type": "string",
+            "title": "Weight (lbs) in 60's (SQX)",
+            "description": "Weight in the participant's 60s. Question 8 - \"Please estimate your weight when you were [in your 60s]. (Exclude any periods when you were pregnant).\" Cleaned version of question 8 using questions 7 and 8. Weights less than 60 pounds and BMI values less than 15 are out of range.",
+            "enum": [
+                "Numeric",
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "N/A - Has not Reached this Age",
+                "Out of Range"
+            ]
+        },
+        "sqx_wt70s": {
+            "type": "string",
+            "title": "Weight (lbs) in 70's (SQX)",
+            "description": "Weight in the participant's 70s. Question 8 - \"Please estimate your weight when you were [in your 70s]. (Exclude any periods when you were pregnant).\" Cleaned version of question 8 using questions 7 and 8. Weights less than 60 pounds and BMI values less than 15 are out of range.",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".N",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "N/A - Has not Reached this Age",
+                "Out of Range"
+            ]
+        },
+        "sqx_wt_curr": {
+            "type": "string",
+            "title": "Weight (lbs) (SQX)",
+            "description": "Participant's current weight. Question 9 - \"What is your current weight?\" Cleaned version of question 9 using questions 7 and 9. Weights less than 60 pounds and BMI values less than 15 are out of range.",
+            "enum": [
+                "Numeric",
+                ".F",
+                ".M",
+                ".R"
+            ],
+            "enumDescriptions": [
+                "Numeric",
+                "No Form",
+                "Blank",
+                "Out of Range"
+            ]
+        }
+    },
+    "required": [
+        "sqx_bmi30s",
+        "sqx_bmi30sc",
+        "sqx_bmi40s",
+        "sqx_bmi40sc",
+        "sqx_bmi50s",
+        "sqx_bmi50sc",
+        "sqx_bmi60s",
+        "sqx_bmi60sc",
+        "sqx_bmi70s",
+        "sqx_bmi70sc",
+        "sqx_bmi_curc",
+        "sqx_bmi_curr",
+        "sqx_gain_area",
+        "sqx_height",
+        "sqx_lose_area",
+        "sqx_sit_ht",
+        "sqx_waist_hip",
+        "sqx_wt30s",
+        "sqx_wt40s",
+        "sqx_wt50s",
+        "sqx_wt60s",
+        "sqx_wt70s",
+        "sqx_wt_curr"
+    ]
+}

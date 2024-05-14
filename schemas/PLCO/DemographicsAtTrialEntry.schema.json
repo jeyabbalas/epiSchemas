@@ -1,0 +1,98 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/DemographicsAtTrialEntry.schema.json",
+    "title": "Demographics at Trial Entry",
+    "type": "object",
+    "properties": {
+        "age": {
+            "type": "number",
+            "title": "Age At Randomization",
+            "description": "Age at trial entry, computed from date of birth and randomization date."
+        },
+        "agelevel": {
+            "type": "string",
+            "title": "Age At Randomization",
+            "description": "Categorical version of age, created from the derived age variable.",
+            "enum": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "<= 59",
+                "60-64",
+                "65-69",
+                ">= 70"
+            ]
+        },
+        "arm": {
+            "type": "string",
+            "title": "Randomization Arm",
+            "description": "Randomization group or arm. The intervention (screening) group or the control (usual-care) group.",
+            "enum": [
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "Intervention",
+                "Control"
+            ]
+        },
+        "center": {
+            "type": "string",
+            "title": "Study Center",
+            "description": "The study center at which the participant was randomized.",
+            "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "8",
+                "9",
+                "10",
+                "11"
+            ],
+            "enumDescriptions": [
+                "University of Colorado",
+                "Georgetown University",
+                "Pacific Health Research and Education Institute (Honolulu)",
+                "Henry Ford Health System",
+                "University of Minnesota",
+                "Washington University in St Louis",
+                "University of Pittsburgh",
+                "University of Utah",
+                "Marshfield Clinic Research Foundation",
+                "University of Alabama at Birmingham"
+            ]
+        },
+        "rndyear": {
+            "type": "number",
+            "title": "Year Of Randomization",
+            "description": "Calendar year of trial entry, at which point the participant was randomized into an arm."
+        },
+        "sex": {
+            "type": "string",
+            "title": "Sex",
+            "description": "Sex of the participant.",
+            "enum": [
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "Male",
+                "Female"
+            ]
+        }
+    },
+    "required": [
+        "age",
+        "agelevel",
+        "arm",
+        "center",
+        "rndyear",
+        "sex"
+    ]
+}

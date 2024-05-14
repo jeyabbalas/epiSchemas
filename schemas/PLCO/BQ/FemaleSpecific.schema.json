@@ -1,0 +1,714 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/BQ/FemaleSpecific.schema.json",
+    "title": "Baseline Questionnaire (BQ) Female Specific",
+    "type": "object",
+    "properties": {
+        "bbd": {
+            "type": "string",
+            "title": "Ever Have Benign or Fibrocystic Breast Disease?",
+            "description": "Question F54 - \"Have you ever been told by a doctor that you had any of the following conditions?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "bcontr_f": {
+            "type": "string",
+            "title": "Ever Take Birth Control Pills?",
+            "description": "Question F43 - \"Did you ever take birth control pills for birth control or to regulate menstrual periods?\". Participant's answer modified to \"yes\" if they specified both an age they started taking birth control pills and a total number of years they took them.",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "bcontra": {
+            "type": "string",
+            "title": "Age Started Birth Control Pills?",
+            "description": "Question F44 - \"How old were you when you first started taking birth control pills?\" Participants who were \"50-59\" or \"60+\" when they started birth control pills were collapsed into a \"50+\" category.",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "Not Applicable",
+                "<30",
+                "30-39",
+                "40-49",
+                "50+"
+            ]
+        },
+        "bcontrt": {
+            "type": "string",
+            "title": "Total Years Took Birth Control Pills?",
+            "description": "Question F45 - \"For how many total years did you take birth control pills?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "Not Applicable",
+                "10+ Years",
+                "6-9 Years",
+                "4-5 Years",
+                "2-3 Years",
+                "1 Year or Less"
+            ]
+        },
+        "benign_ovcyst": {
+            "type": "string",
+            "title": "Ever Have Benign Ovarian Tumor/Cyst?",
+            "description": "Question F54 - \"Have you ever been told by a doctor that you had any of the following conditions?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "endometriosis": {
+            "type": "string",
+            "title": "Ever Have Endometriosis?",
+            "description": "Question F54 - \"Have you ever been told by a doctor that you had any of the following conditions?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "fchilda": {
+            "type": "string",
+            "title": "Age at Birth of First Child?",
+            "description": "Question F42 - \"What was your age at the birth of your first child?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "Not Applicable",
+                "<16",
+                "16-19",
+                "20-24",
+                "25-29",
+                "30-34",
+                "35-39",
+                "40+"
+            ]
+        },
+        "fmenstr": {
+            "type": "string",
+            "title": "Age When Had First Menstrual Period?",
+            "description": "Question F31 - \"How old were you when you had your first menstrual period?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "<10",
+                "10-11",
+                "12-13",
+                "14-15",
+                "16+"
+            ]
+        },
+        "horm_stat": {
+            "type": "string",
+            "title": "Female Hormone Status",
+            "description": "Female hormone status uses ever taken female hormones and currently on hormones to determine the participant's hormone status.",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Missing",
+                "Never",
+                "Current",
+                "Former",
+                "Unknown Whether Current Or Former",
+                "Doesn't Know If She Ever Took HRT"
+            ]
+        },
+        "hyster_f": {
+            "type": "string",
+            "title": "Ever Have a Hysterectomy?",
+            "description": "Question F47 - \"Have you had a hysterectomy, that is, have you had your uterus or womb removed?\" Participants modified to \"yes\" if an age of hysterectomy is given in question F48",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes",
+                "Don't Know"
+            ]
+        },
+        "hystera": {
+            "type": "string",
+            "title": "Age at Hysterectomy",
+            "description": "Question F48 - \"What was your age when you had your uterus or womb removed?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "Not Applicable",
+                "<40",
+                "40-44",
+                "45-49",
+                "50-54",
+                "55+"
+            ]
+        },
+        "livec": {
+            "type": "string",
+            "title": "# of Live Births",
+            "description": "Question F41 - \"How many of your pregnancies resulted in a live birth?\" Allowed values are 0-29. Participants with more than five pregnancies are collapsed to \"five or more\".",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "Zero",
+                "One",
+                "Two",
+                "Three",
+                "Four",
+                "Five Or More"
+            ]
+        },
+        "lmenstr": {
+            "type": "string",
+            "title": "Age at Menopause",
+            "description": "Question F32 - \"How old were you when you had your last period?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "<40",
+                "40-44",
+                "45-49",
+                "50-54",
+                "55+"
+            ]
+        },
+        "menstrs": {
+            "type": "string",
+            "title": "Type of Menopause",
+            "description": "Question F33 - \"Did your periods stop because of natural menopause, surgery, radiation, or drug therapy?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "Natural Menopause",
+                "Surgery",
+                "Radiation",
+                "Drug Therapy"
+            ]
+        },
+        "menstrs_stat_type": {
+            "type": "string",
+            "title": "Reason menstrual periods stopped.",
+            "description": "Reason the participant's menstrual periods stopped. Because minimal information was gathered about menopause, the menopause information is supplemented with hysterectomy and oophorectomy information.",
+            "enum": [
+                ".F",
+                ".G",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Natural postmenopausal",
+                "Bilateral oophorectomy",
+                "Hysterectomy, no bilateral oophorectomy",
+                "Surgical, details unclear",
+                "Drug therapy",
+                "Radiation",
+                "Postmenopausal, reason unknown",
+                "Menopausal status unknown"
+            ]
+        },
+        "miscar": {
+            "type": "string",
+            "title": "# of Miscarriages/Abortions",
+            "description": "Question F39 - \"How many of your pregnancies resulted in miscarriage or an abortion?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "0",
+                "1",
+                "2+"
+            ]
+        },
+        "ovariesr_f": {
+            "type": "string",
+            "title": "Removed Ovaries",
+            "description": "Question F49 - \"Have you ever had one or both of your ovaries removed?\" Question F50 - \"What exactly was removed?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "8"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "Ovaries Not Removed",
+                "One Ovary - Partial",
+                "One Ovary - Total",
+                "Both Ovaries - Partial",
+                "Both Ovaries - Total",
+                "Don't Know",
+                "Ambiguous"
+            ]
+        },
+        "post_menopausal": {
+            "type": "string",
+            "title": "Post-Menopausal Status",
+            "description": "Was the participant post-menopausal at trial entry. This question was not asked directly on the BQ, therefore information on menopause has been supplemented with hysterectomy and oophorectomy information.",
+            "enum": [
+                ".F",
+                ".G",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Definitely post-menopausal",
+                "Possibly post-menopausal"
+            ]
+        },
+        "preg_f": {
+            "type": "string",
+            "title": "Ever Been Pregnant?",
+            "description": "Question F35 - \"Have you ever been pregnant?\" Participant's answer is modified to be \"yes\" if the participant answers on age of first pregnancy, number of pregnancies, number of still birth pregnancies, number of miscarriages, number of tubal pregnancies, age at birth of first child, or the number of live births implied pregnancy.",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes",
+                "Don't Know"
+            ]
+        },
+        "prega": {
+            "type": "string",
+            "title": "Age When First Became Pregnant?",
+            "description": "Question F36 - \"How old were you when you first became pregnant?\" Participants who were \"40-44\" or \"45+\" when they first became pregnant were collapsed into \"40+\".",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "Not Applicable",
+                "<15",
+                "15-19",
+                "20-24",
+                "25-29",
+                "30-34",
+                "35-39",
+                "40+"
+            ]
+        },
+        "pregc": {
+            "type": "string",
+            "title": "# of Pregnancies",
+            "description": "Question F37 - \"How many times have you been pregnant? Please include stillbirths, miscarriages, abortions, tubal or ectopic pregnancies, and live births.\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "None",
+                "1",
+                "2",
+                "3-4",
+                "5-9",
+                "10+"
+            ]
+        },
+        "stillb": {
+            "type": "string",
+            "title": "# of Still Birth Pregnancies",
+            "description": "Question F38 - \"How many of your pregnancies resulted in a stillbirth?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "0",
+                "1",
+                "2+"
+            ]
+        },
+        "thorm": {
+            "type": "string",
+            "title": "# of Years Taking Female Hormones",
+            "description": "Question F53 - \"For how many total years did you take female hormones?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "Not Applicable",
+                "10+ Years",
+                "6-9 Years",
+                "4-5 Years",
+                "2-3 Years",
+                "<= 1 Year"
+            ]
+        },
+        "trypreg": {
+            "type": "string",
+            "title": "Ever Tried to Become Pregnant for a Year or More Without Success?",
+            "description": "Question F34 - \"Have you ever tried to become pregnant for a year or more without success?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "tubal": {
+            "type": "string",
+            "title": "# of Tubal/Ectopic Pregnancies?",
+            "description": "Question F40 - \"How many of your pregnancies resulted in a pregnancy in one of your tubes, that is, a tubal or ectopic pregnancy?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "0",
+                "1",
+                "2+"
+            ]
+        },
+        "tuballig": {
+            "type": "string",
+            "title": "Ever Tubes Tied?",
+            "description": "Question F46 - \"Have you had a tubal ligation, that is have you had your tubes tied?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes",
+                "Don't Know"
+            ]
+        },
+        "uterine_fib": {
+            "type": "string",
+            "title": "Ever Have Uterine Fibroid Tumors?",
+            "description": "Question F54 - \"Have you ever been told by a doctor that you had any of the following conditions?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "curhorm": {
+            "type": "string",
+            "title": "Currently Using Female Hormones?",
+            "description": "Question F52 - \"Are you currently using female hormones?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "horm_f": {
+            "type": "string",
+            "title": "Ever Take Female Hormones?",
+            "description": "Question F51 - \"Sometimes women take female hormones such as estrogen or progesterone around the time of menopause. Have you ever used female hormones (tablets, pills, or creams) for menopause?\" Participant's answers modified to \"yes\" if they had said \"no\" but gave an answer for whether they are currently using female hormones and said they used them for greater than 1 year.",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes",
+                "Don't Know"
+            ]
+        }
+    },
+    "required": [
+        "bbd",
+        "bcontr_f",
+        "bcontra",
+        "bcontrt",
+        "benign_ovcyst",
+        "endometriosis",
+        "fchilda",
+        "fmenstr",
+        "horm_stat",
+        "hyster_f",
+        "hystera",
+        "livec",
+        "lmenstr",
+        "menstrs",
+        "menstrs_stat_type",
+        "miscar",
+        "ovariesr_f",
+        "post_menopausal",
+        "preg_f",
+        "prega",
+        "pregc",
+        "stillb",
+        "thorm",
+        "trypreg",
+        "tubal",
+        "tuballig",
+        "uterine_fib",
+        "curhorm",
+        "horm_f"
+    ]
+}

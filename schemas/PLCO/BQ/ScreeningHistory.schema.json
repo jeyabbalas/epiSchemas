@@ -1,0 +1,262 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/BQ/ScreeningHistory.schema.json",
+    "title": "Baseline Questionnaire (BQ) Screening History",
+    "type": "object",
+    "properties": {
+        "ca125_history": {
+            "type": "string",
+            "title": "Had Blood Test For Ovarian Cancer in Past 3 Years?",
+            "description": "Question F60 - \"During the past three years, have you had a blood test for ovarian cancer, for example CA-125?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes, Once",
+                "Yes, More Than Once",
+                "Don't Know"
+            ]
+        },
+        "colorect_history": {
+            "type": "string",
+            "title": "Had Procedure to Examine Colon/Rectum in Past 3 Years?",
+            "description": "Question M47, F62 - \"During the past three years, have you had a colonoscopy, sigmoidoscopy, or barium enema to examine the colon and rectum?\"",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes, Once",
+                "Yes, More Than Once",
+                "Don't Know"
+            ]
+        },
+        "colscrn_history": {
+            "type": "string",
+            "title": "Had Colonoscopy or Test for Blood in Stool In Past 3 Years?",
+            "description": "This is a summary of any colon screening contamination. Participants who had at least one test for blood in their stool or a colonoscopy, sigmoidoscopy or barium enema examining the colon and rectum in the past three years are considered to have had a colon screen.",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "mammo_history": {
+            "type": "string",
+            "title": "Had Mammogram in Past 3 Years?",
+            "description": "Question F56 - During the past three years, have you had a mammogram?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes, Once",
+                "Yes, More Than Once",
+                "Don't Know"
+            ]
+        },
+        "papsmear_history": {
+            "type": "string",
+            "title": "Had Pap Smear in Past 3 Years?",
+            "description": "Question F57 - \"During the past three years, have you had a pap smear?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes, Once",
+                "Yes, More Than Once",
+                "Don't Know"
+            ]
+        },
+        "pelvic_history": {
+            "type": "string",
+            "title": "Had Pelvic Exam in Past 3 Years?",
+            "description": "Question F58 - \"During the past three years, have you had a pelvic examination?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes, Once",
+                "Yes, More Than Once",
+                "Don't Know"
+            ]
+        },
+        "psa_history": {
+            "type": "string",
+            "title": "Had Blood Test for Prostate Cancer in Past 3 Years?",
+            "description": "Question M45 - \"During the past three years, have you had a blood test for prostate cancer, for example PSA?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes, Once",
+                "Yes, More Than Once",
+                "Don't Know"
+            ]
+        },
+        "rectal_history": {
+            "type": "string",
+            "title": "Had a Digital Rectal Exam in Past 3 Years?",
+            "description": "Question M44 - \"During the past three years, have you had a digital rectal examination of the prostate?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes, Once",
+                "Yes, More Than Once",
+                "Don't Know"
+            ]
+        },
+        "stool_history": {
+            "type": "string",
+            "title": "Had a Test for Blood in Stool in Past 3 Years?",
+            "description": "Question M46, F61 - \"During the past three years, have you had a test for blood in the stool?\"",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes, Once",
+                "Yes, More Than Once",
+                "Don't Know"
+            ]
+        },
+        "usound_history": {
+            "type": "string",
+            "title": "Had Ultrasound/Scan of the Ovaries In Past 3 Years?",
+            "description": "Question F59 - \"During the past three years, have you had an ultrasound or scan of your ovaries?\"",
+            "enum": [
+                ".F",
+                ".G",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Wrong Gender",
+                "Not Answered",
+                "No",
+                "Yes, Once",
+                "Yes, More Than Once",
+                "Don't Know"
+            ]
+        },
+        "xray_history": {
+            "type": "string",
+            "title": "Had a Chest X-Ray in Past 3 Years?",
+            "description": "Question M43, F55 - \" During the past three years, have you had a chest x-ray?\"",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes, Once",
+                "Yes, More Than Once",
+                "Don't Know"
+            ]
+        }
+    },
+    "required": [
+        "ca125_history",
+        "colorect_history",
+        "colscrn_history",
+        "mammo_history",
+        "papsmear_history",
+        "pelvic_history",
+        "psa_history",
+        "rectal_history",
+        "stool_history",
+        "usound_history",
+        "xray_history"
+    ]
+}

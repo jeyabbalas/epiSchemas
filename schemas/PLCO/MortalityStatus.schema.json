@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/MortalityStatus.schema.json",
+    "title": "Mortality Status",
+    "type": "object",
+    "properties": {
+        "dth_days": {
+            "type": [
+                "number",
+                "string"
+            ],
+            "title": "Days Until Death",
+            "description": "Days from randomization until date of death.",
+            "oneOf": [
+                {
+                    "type": "number"
+                },
+                {
+                    "type": "string",
+                    "enum": [
+                        ".N"
+                    ],
+                    "enumDescriptions": [
+                        "Not applicable"
+                    ]
+                }
+            ]
+        },
+        "is_dead": {
+            "type": "string",
+            "title": "Dead?",
+            "description": "Is the participant confirmed dead?",
+            "enum": [
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Not Confirmed Dead",
+                "Dead"
+            ]
+        },
+        "is_dead_with_cod": {
+            "type": "string",
+            "title": "Dead With Known Cause?",
+            "description": "Is the participant confirmed dead with known cause of death?",
+            "enum": [
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Not Confirmed Dead",
+                "Dead"
+            ]
+        }
+    },
+    "required": [
+        "dth_days",
+        "is_dead",
+        "is_dead_with_cod"
+    ]
+}

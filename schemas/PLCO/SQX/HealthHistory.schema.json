@@ -1,0 +1,696 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/SQX/HealthHistory.schema.json",
+    "title": "Supplemental Questionnaire (SQX) Health History",
+    "type": "object",
+    "properties": {
+        "sqx_arthritisa": {
+            "type": "string",
+            "title": "Age at Arthritis (SQX)",
+            "description": "Age at arthritis diagnosis. Question 19 - \"At what age were you first diagnosed with arthritis?\" Cleaned version of question 19 using other responses from question 19. Question 19 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable",
+                "< 30",
+                "30-39",
+                "40-49",
+                "50-59",
+                "60-69",
+                "70 +"
+            ]
+        },
+        "sqx_asthma": {
+            "type": "string",
+            "title": "Asthma (SQX)",
+            "description": "History of asthma. Question 18 - \"Were you ever diagnosed with [asthma]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_asthmaa": {
+            "type": "string",
+            "title": "Age at Asthma (SQX)",
+            "description": "Age at asthma diagnosis. Question 18 - \"At what age were you first diagnosed with [asthma]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable",
+                "< 50",
+                "50-59",
+                "60-69",
+                "70 +"
+            ]
+        },
+        "sqx_broke_arm": {
+            "type": "string",
+            "title": "Broken Arm (SQX)",
+            "description": "Question 20 - \"After you were 40 years old, did you ever have a bone fracture or broken bone [forearm or wrist] in any of the following parts of your body?\" Unedited.",
+            "enum": [
+                ".F",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_broke_hip": {
+            "type": "string",
+            "title": "Broken Hip (SQX)",
+            "description": "Question 20 - \"After you were 40 years old, did you ever have a bone fracture or broken bone [hip] in any of the following parts of your body?\"",
+            "enum": [
+                ".F",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_broke_none": {
+            "type": "string",
+            "title": "Broken No Bones (SQX)",
+            "description": "No broken bones. Question 20 - \"After you were 40 years old, did you ever have a bone fracture or broken bone [no bones fractured or broken] in any of the following parts of your body?\" Cleaned question 20. Question has multiple parts and cleaned variables.",
+            "enum": [
+                ".F",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_broke_oth_bone": {
+            "type": "string",
+            "title": "Broken Other Bones (SQX)",
+            "description": "Question 20 - \"After you were 40 years old, did you ever have a bone fracture or broken bone [any other bone] in any of the following parts of your body?\" Unedited.",
+            "enum": [
+                ".F",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_broke_vertebra": {
+            "type": "string",
+            "title": "Broken Vertebra (SQX)",
+            "description": "Question 20 - \"After you were 40 years old, did you ever have a bone fracture or broken bone [vertebra] in any of the following parts of your body?\" Unedited.",
+            "enum": [
+                ".F",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_cholesterol": {
+            "type": "string",
+            "title": "High Cholesterol (SQX)",
+            "description": "History of high cholesterol. Question 18 - \"Were you ever diagnosed with [high cholesterol]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqx_cholesterola": {
+            "type": "string",
+            "title": "Age at High Cholesterol (SQX)",
+            "description": "Age at high cholesterol diagnosis. Question 18 - \"At what age were you first diagnosed with [high cholesterol]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable",
+                "< 50",
+                "50-59",
+                "60-69",
+                "70 +"
+            ]
+        },
+        "sqx_diabetesa": {
+            "type": "string",
+            "title": "Age at Diabetes (SQX)",
+            "description": "Age at diabetes diagnosis. Question 18 - \"At what age were you first diagnosed with [diabetes]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable",
+                "< 50",
+                "50-59",
+                "60-69",
+                "70 +"
+            ]
+        },
+        "sqx_emphysemaa": {
+            "type": "string",
+            "title": "Age at Emphysema (SQX)",
+            "description": "Age at emphysema diagnosis. Question 18 - \"At what age were you first diagnosed with [emphysema]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable",
+                "< 50",
+                "50-59",
+                "60-69",
+                "70 +"
+            ]
+        },
+        "sqx_heartaa": {
+            "type": "string",
+            "title": "Age at Heart Attack (SQX)",
+            "description": "Age at heart attack diagnosis. Question 18 - \"At what age were you first diagnosed with [heart attack]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable",
+                "< 50",
+                "50-59",
+                "60-69",
+                "70 +"
+            ]
+        },
+        "sqx_hypertena": {
+            "type": "string",
+            "title": "Age at Hypertension (SQX)",
+            "description": "Age at high blood pressure diagnosis. Question 18 - \"At what age were you first diagnosed with [high blood pressure]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable",
+                "< 50",
+                "50-59",
+                "60-69",
+                "70 +"
+            ]
+        },
+        "sqx_osteopora": {
+            "type": "string",
+            "title": "Age at Osteoporosis (SQX)",
+            "description": "Age at osteoporosis diagnosis. Question 18 - \"At what age were you first diagnosed with [osteoporosis]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable",
+                "< 50",
+                "50-59",
+                "60-69",
+                "70 +"
+            ]
+        },
+        "sqx_strokea": {
+            "type": "string",
+            "title": "Age at Stroke (SQX)",
+            "description": "Age at stroke diagnosis. Question 18 - \"At what age were you first diagnosed with [stroke]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable",
+                "< 50",
+                "50-59",
+                "60-69",
+                "70 +"
+            ]
+        },
+        "sqxbq_arthritis": {
+            "type": "string",
+            "title": "Arthritis (SQX + BQ)",
+            "description": "History of arthritis. Question 19 - \"Were you ever diagnosed with [arthritis]?\" Cleaned version of question 19 using other responses from question 19. Then aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 19 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_arthritist": {
+            "type": "string",
+            "title": "Arthritis Type (SQX + BQ)",
+            "description": "Type of arthritis. Question 19 - \"What type of arthritis?\" Cleaned version of question 19 using other responses from question 19. Then aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 19 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable",
+                "Rheumatoid Arthritis",
+                "Osteoarthritis",
+                "Not Sure Which Type"
+            ]
+        },
+        "sqxbq_diabetes": {
+            "type": "string",
+            "title": "Diabetes (SQX + BQ)",
+            "description": "History of diabetes. Question 18 - \"Were you ever diagnosed with [diabetes]?\" Cleaned version of question 18 using other responses from question 18. Then aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_emphysema": {
+            "type": "string",
+            "title": "Emphysema (SQX + BQ)",
+            "description": "History of emphysema. Question 18 - \"Were you ever diagnosed with [emphysema]?\" Cleaned version of question 18 using other responses from question 18. Then aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_hearta": {
+            "type": "string",
+            "title": "Heart Attack (SQX + BQ)",
+            "description": "History of heart attack. Question 18 - \"Were you ever diagnosed with [heart attack]?\" Cleaned version of question 18 using other responses from question 18. Then aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_hyperten": {
+            "type": "string",
+            "title": "Hypertension (SQX + BQ)",
+            "description": "History of high blood pressure. Question 18 - \"Were you ever diagnosed with [high blood pressure]?\" Cleaned version of question 18 using other responses from question 18. Then aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_osteopor": {
+            "type": "string",
+            "title": "Osteoporosis (SQX + BQ)",
+            "description": "History of osteoporosis. Question 18 - \"Were you ever diagnosed with [osteoporosis]?\" Cleaned version of question 18 using other responses from question 18. Then aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxbq_stroke": {
+            "type": "string",
+            "title": "Stroke (SQX + BQ)",
+            "description": "History of stroke. Question 18 - \"Were you ever diagnosed with [stroke]?\" Cleaned version of question 18 using other responses from question 18. Then aligned with BQ. If the SQX response conflicts with the BQ, then this is set to ambiguous. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxo_arthritis": {
+            "type": "string",
+            "title": "Arthritis (SQX)",
+            "description": "History of arthritis. Question 19 - \"Were you ever diagnosed with [arthritis]?\" Cleaned version of question 19 using other responses from question 19. Question 19 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxo_arthritist": {
+            "type": "string",
+            "title": "Arthritis Type (SQX)",
+            "description": "Type of arthritis. Question 19 - \"What type of arthritis?\" Cleaned version of question 19 using other responses from question 19. Question 19 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                ".N",
+                "1",
+                "2",
+                "3"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "Not Applicable",
+                "Rheumatoid Arthritis",
+                "Osteoarthritis",
+                "Not Sure Which Type"
+            ]
+        },
+        "sqxo_diabetes": {
+            "type": "string",
+            "title": "Diabetes (SQX)",
+            "description": "History of diabetes. Question 18 - \"Were you ever diagnosed with [diabetes]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxo_emphysema": {
+            "type": "string",
+            "title": "Emphysema (SQX)",
+            "description": "History of emphysema. Question 18 - \"Were you ever diagnosed with [emphysema]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxo_hearta": {
+            "type": "string",
+            "title": "Heart Attack (SQX)",
+            "description": "History of heart attack. Question 18 - \"Were you ever diagnosed with [heart attack]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxo_hyperten": {
+            "type": "string",
+            "title": "Hypertension (SQX)",
+            "description": "History of high blood pressure. Question 18 - \"Were you ever diagnosed with [high blood pressure]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxo_osteopor": {
+            "type": "string",
+            "title": "Osteoporosis (SQX)",
+            "description": "History of osteoporosis. Question 18 - \"Were you ever diagnosed with [osteoporosis]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        },
+        "sqxo_stroke": {
+            "type": "string",
+            "title": "Stroke (SQX)",
+            "description": "History of stroke. Question 18 - \"Were you ever diagnosed with [stroke]?\" Cleaned version of question 18 using other responses from question 18. Question 18 has multiple parts and cleaned variables.",
+            "enum": [
+                ".A",
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "Ambiguous",
+                "No Form",
+                "Blank",
+                "No",
+                "Yes"
+            ]
+        }
+    },
+    "required": [
+        "sqx_arthritisa",
+        "sqx_asthma",
+        "sqx_asthmaa",
+        "sqx_broke_arm",
+        "sqx_broke_hip",
+        "sqx_broke_none",
+        "sqx_broke_oth_bone",
+        "sqx_broke_vertebra",
+        "sqx_cholesterol",
+        "sqx_cholesterola",
+        "sqx_diabetesa",
+        "sqx_emphysemaa",
+        "sqx_heartaa",
+        "sqx_hypertena",
+        "sqx_osteopora",
+        "sqx_strokea",
+        "sqxbq_arthritis",
+        "sqxbq_arthritist",
+        "sqxbq_diabetes",
+        "sqxbq_emphysema",
+        "sqxbq_hearta",
+        "sqxbq_hyperten",
+        "sqxbq_osteopor",
+        "sqxbq_stroke",
+        "sqxo_arthritis",
+        "sqxo_arthritist",
+        "sqxo_diabetes",
+        "sqxo_emphysema",
+        "sqxo_hearta",
+        "sqxo_hyperten",
+        "sqxo_osteopor",
+        "sqxo_stroke"
+    ]
+}

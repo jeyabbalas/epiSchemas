@@ -1,0 +1,86 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/BQ/Compliance.schema.json",
+    "title": "Baseline Questionnaire (BQ) Compliance",
+    "type": "object",
+    "properties": {
+        "bq_adminm": {
+            "type": "string",
+            "title": "Method of Questionnaire Administration",
+            "description": "Part of the section, For Office Use Only, headed \"Method of Administration\".",
+            "enum": [
+                ".F",
+                ".M",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "Self",
+                "Self With Assistance",
+                "In-Person Interview By SC Staff",
+                "In-Person Interview By Other",
+                "Telephone"
+            ]
+        },
+        "bq_age": {
+            "type": "number",
+            "title": "Age at BQ",
+            "description": "Calculated from date of baseline questionnaire completion and date of birth.",
+            "anyOf": [
+                {
+                    "type": "number"
+                },
+                {
+                    "enum": [
+                        ".F"
+                    ],
+                    "enumDescriptions": [
+                        "No Form"
+                    ]
+                }
+            ]
+        },
+        "bq_compdays": {
+            "type": "number",
+            "title": "Days Until BQ Completion",
+            "description": "Question M48, F63 - \"What is the date you completed this questionnaire?\" The number of days between BQ completion and randomization.",
+            "anyOf": [
+                {
+                    "type": "number"
+                },
+                {
+                    "enum": [
+                        ".F"
+                    ],
+                    "enumDescriptions": [
+                        "No Form"
+                    ]
+                }
+            ]
+        },
+        "bq_returned": {
+            "type": "string",
+            "title": "Did the Participant Return the BQ?",
+            "description": "",
+            "enum": [
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes"
+            ]
+        }
+    },
+    "required": [
+        "bq_adminm",
+        "bq_age",
+        "bq_compdays",
+        "bq_returned"
+    ]
+}

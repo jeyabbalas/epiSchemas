@@ -1,0 +1,244 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/BQ/Diseases.schema.json",
+    "title": "Baseline Questionnaire (BQ) Diseases",
+    "type": "object",
+    "properties": {
+        "arthrit_f": {
+            "type": "string",
+            "title": "Arthritis",
+            "description": "Did the participant ever have arthritis?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "bronchit_f": {
+            "type": "string",
+            "title": "Bronchitis",
+            "description": "Did the participant ever have chronic bronchitis?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "colon_comorbidity": {
+            "type": "string",
+            "title": "Colon Comorbidities",
+            "description": "Did the participant ever have a colon related co-morbidity (ulcerative colitis, Crohn's disease, Gardner's syndrome, or familial polyposis)?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Missing",
+                "No",
+                "Yes"
+            ]
+        },
+        "diabetes_f": {
+            "type": "string",
+            "title": "Diabetes",
+            "description": "Did the participant ever have diabetes?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "divertic_f": {
+            "type": "string",
+            "title": "Diverticulitis/Diverticulosis",
+            "description": "Did the participant ever have diverticulitis or diverticulosis?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "emphys_f": {
+            "type": "string",
+            "title": "Emphysema",
+            "description": "Did the participant ever have emphysema?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "gallblad_f": {
+            "type": "string",
+            "title": "Gallbladder Stones or Inflammation",
+            "description": "Did the participant ever have gall bladder stones or inflammation?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "hearta_f": {
+            "type": "string",
+            "title": "Heart Attack",
+            "description": "Did the participant ever have coronary heart disease or a heart attack?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "hyperten_f": {
+            "type": "string",
+            "title": "Hypertension",
+            "description": "Did the participant ever have high blood pressure?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "liver_comorbidity": {
+            "type": "string",
+            "title": "Liver Comorbidities",
+            "description": "Did the participant ever have a liver related co-morbidity (hepatitis or cirrhosis)?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Missing",
+                "No",
+                "Yes"
+            ]
+        },
+        "osteopor_f": {
+            "type": "string",
+            "title": "Osteoporosis",
+            "description": "Did the participant ever have osteoporosis?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "polyps_f": {
+            "type": "string",
+            "title": "Colorectal Polyps",
+            "description": "Did the participant ever have colorectal polyps?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        },
+        "stroke_f": {
+            "type": "string",
+            "title": "Stroke",
+            "description": "Did the participant have a stroke?",
+            "enum": [
+                ".F",
+                ".M",
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No Form",
+                "Not Answered",
+                "No",
+                "Yes"
+            ]
+        }
+    },
+    "required": [
+        "arthrit_f",
+        "bronchit_f",
+        "colon_comorbidity",
+        "diabetes_f",
+        "divertic_f",
+        "emphys_f",
+        "gallblad_f",
+        "hearta_f",
+        "hyperten_f",
+        "liver_comorbidity",
+        "osteopor_f",
+        "polyps_f",
+        "stroke_f"
+    ]
+}

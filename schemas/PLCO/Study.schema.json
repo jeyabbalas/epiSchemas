@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/Study.schema.json",
+    "title": "Study",
+    "type": "object",
+    "properties": {
+        "j_ph_any_trial": {
+            "type": "string",
+            "title": "Trial Personal History of Any Cancer",
+            "description": "Did the participant have a personal history of any cancer prior to trial entry?",
+            "enum": [
+                "0",
+                "1",
+                "9"
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes",
+                "Unknown"
+            ]
+        }
+    },
+    "required": [
+        "j_ph_any_trial"
+    ]
+}

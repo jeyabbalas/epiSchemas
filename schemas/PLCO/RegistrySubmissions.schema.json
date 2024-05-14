@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/RegistrySubmissions.schema.json",
+    "title": "Registry Submissions",
+    "type": "object",
+    "properties": {
+        "queried_centerstate_round2": {
+            "type": "string",
+            "title": "Queried in the state that matches the participant's center",
+            "description": "Queried in the state that matches the participant's center in round 2",
+            "enum": [
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes"
+            ]
+        },
+        "queried_centerstate_round3": {
+            "type": "string",
+            "title": "Queried in the state that matches the participant's center",
+            "description": "Queried in the state that matches the participant's center in round 3",
+            "enum": [
+                "0",
+                "1"
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes"
+            ]
+        }
+    },
+    "required": [
+        "queried_centerstate_round2",
+        "queried_centerstate_round3"
+    ]
+}

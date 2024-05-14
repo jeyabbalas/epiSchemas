@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/Identifiers.schema.json",
+    "title": "Identifiers",
+    "type": "object",
+    "properties": {
+        "build": {
+            "type": "string",
+            "title": "Build",
+            "description": "Masterfile build. Distributed to all datasets and used to identify the version of the database.",
+            "maxLength": 30
+        },
+        "build_cancers": {
+            "type": "string",
+            "title": "Build Cancer Cohort",
+            "description": "The source of the cancer incidence data.",
+            "enum": [
+                "3"
+            ],
+            "enumDescriptions": [
+                "Full Registry"
+            ]
+        },
+        "build_death_cutoff": {
+            "type": "string",
+            "title": "Build Death Cutoff",
+            "description": "",
+            "enum": [
+                "4"
+            ],
+            "enumDescriptions": [
+                "Deaths through 2018"
+            ]
+        },
+        "build_incidence_cutoff": {
+            "type": "string",
+            "title": "Build Incidence Cutoff",
+            "description": "The censoring cutoff for cancer incidence data associated with the dataset.",
+            "enum": [
+                "3"
+            ],
+            "enumDescriptions": [
+                "Cancer Incidence Data Through 2017"
+            ]
+        },
+        "harm_build": {
+            "type": "string",
+            "title": "Harmonized Build",
+            "description": "Source data version. Distributed to all datasets and used to identify the version of the database.",
+            "maxLength": 30
+        },
+        "plco_id": {
+            "type": "string",
+            "title": "PLCO ID",
+            "description": "",
+            "maxLength": 8
+        }
+    },
+    "required": [
+        "build",
+        "build_cancers",
+        "build_death_cutoff",
+        "build_incidence_cutoff",
+        "harm_build",
+        "plco_id"
+    ]
+}

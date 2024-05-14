@@ -1,0 +1,68 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/PLCO/ReConsent.schema.json",
+    "title": "Re-consent",
+    "type": "object",
+    "properties": {
+        "reconsent_outcome": {
+            "type": "string",
+            "title": "Outcome of the Re-Consent Process",
+            "description": "The immediate result of the attempt to transfer the participant to centralized follow-up. Participants alive at trial close-out were informed of the transfer to centralized follow-up, and could request/refuse continued follow-up. In the absence of participant contact, the re-consent outcome was determined by default. The default outcome varied by study center. Active: Transferred to centralized follow-up, including continued contact, state registry query and National Death Index (NDI) search. Passive: No active contact, but allows for state registry query and NDI search. Lost: Lost to follow-up and not known dead before re-consent. Considered passive at the time of reconsent. Refused: Declined further follow-up. Confirmed/Presumed Dead: Death prior to opportunity to re-consent.",
+            "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "11",
+                "12",
+                "13",
+                "14"
+            ],
+            "enumDescriptions": [
+                "Active by Request",
+                "Active by Default/Follow-up",
+                "Passive by Request",
+                "Passive by Default/Follow-up",
+                "Refused by Request",
+                "Refused by Default/Follow-up",
+                "Refused Prior to Re-Consent",
+                "Confirmed Dead Prior to Re-Consent",
+                "Presumed Dead Prior to Re-Consent",
+                "Passive, Lost Prior to Re-Consent"
+            ]
+        },
+        "reconsent_outcome_days": {
+            "type": "number",
+            "title": "Days Until Re-Consent Outcome is Determined",
+            "description": "Days from randomization until the participant's re-consent outcome is determined. For participants who re-consented by request or refused by request, this is the time of request. For participants whose transfer status was determined by default, this is an estimated time of request had there been contact. If the participant had refused or died prior to re-consent, this is the time of those events."
+        },
+        "reconsent_weight": {
+            "type": "number",
+            "title": "Reconsent Sampling Weight",
+            "description": "Sampling weights to align the transfer population to the full population. This is the inverse propensity score weight."
+        },
+        "reconsent_weight_cat": {
+            "type": "string",
+            "title": "Reconsent Sampling Weight Category",
+            "description": "",
+            "enum": [
+                "0",
+                "1",
+                "2"
+            ],
+            "enumDescriptions": [
+                "Participant Refused to Transfer",
+                "Participant Dead Prior to Transfer",
+                "Participant Transferred Active or Passive"
+            ]
+        }
+    },
+    "required": [
+        "reconsent_outcome",
+        "reconsent_outcome_days",
+        "reconsent_weight",
+        "reconsent_weight_cat"
+    ]
+}
