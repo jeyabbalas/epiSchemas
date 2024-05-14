@@ -1,0 +1,319 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/BCRPP/Metadata.schema.json",
+    "type": "object",
+    "properties": {
+        "study_id": {
+            "type": "string",
+            "title": "Study ID",
+            "enum": [
+                "01",
+                "02",
+                "03",
+                "04",
+                "05",
+                "06",
+                "07",
+                "08",
+                "09",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18",
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "24"
+            ],
+            "enumDescriptions": [
+                "BCFR",
+                "BWHS",
+                "CARET",
+                "CLUE-II",
+                "CSDLH",
+                "CPS-II",
+                "CPS-3",
+                "CTS",
+                "EPIC",
+                "GSSFHS",
+                "Janus",
+                "MMHS",
+                "MAC",
+                "MCCS",
+                "MEC",
+                "NHS",
+                "NHSII",
+                "NYUWHS",
+                "SIS",
+                "SNMC",
+                "VITAL",
+                "WHI",
+                "WHS",
+                "WLH"
+            ]
+        },
+        "study_site": {
+            "type": "integer",
+            "title": "CX",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                888
+            ],
+            "enumDescriptions": [
+                "Australia",
+                "Canada",
+                "China",
+                "Denmark",
+                "Finland",
+                "France",
+                "Germany",
+                "Greece",
+                "Iran",
+                "Italy",
+                "Norway",
+                "Singapore",
+                "Spain",
+                "Sweden",
+                "The Netherlands",
+                "United Kingdon",
+                "United States",
+                "Japan",
+                "Missing/Unknown"
+            ]
+        },
+        "fhx_def": {
+            "type": "integer",
+            "title": "Which relatives were included in family history variable",
+            "enum": [
+                1,
+                2,
+                3,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Mothers and sisters",
+                "Mothers, sisters, daughters",
+                "Includes males",
+                "NA (did not record fam hx)",
+                "Missing/Unknown"
+            ]
+        },
+        "menoage_def": {
+            "type": "integer",
+            "title": "How age of menopause and/or menopause status was defined",
+            "enum": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "enumDescriptions": [
+                "self-reported age",
+                "status reported at questionnaire",
+                "Not collected; assumed >50 years= postmenopausal, <50 years=premenopausal",
+                "Other"
+            ]
+        },
+        "menoage_other": {
+            "type": "string",
+            "title": "How age of menopause and/or menopause status was defined if 'other' for menoage_def",
+            "description": "Free text"
+        },
+        "ajancestry_def": {
+            "type": "integer",
+            "title": "How was the AJ ancestry variable determined",
+            "enum": [
+                1,
+                2
+            ],
+            "enumDescriptions": [
+                "Question specifically asks about ancestry",
+                "Question about religion only"
+            ]
+        },
+        "preg_def": {
+            "type": "integer",
+            "title": "Definition for full-term pregnancies",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                888
+            ],
+            "enumDescriptions": [
+                "Pregnancies lasting 20+ weeks",
+                "Pregnancies lasting 5+ months",
+                "Pregnancies lasting 26+ weeks",
+                "Pregnancies lasting 6+ months",
+                "Pregnancies lasting 7+ months",
+                "Full term pregnancy (no specific definition)",
+                "Live births",
+                "Live births and still births",
+                "Number of children",
+                "Unknown"
+            ]
+        },
+        "biopsynum_def": {
+            "type": "integer",
+            "title": "How number of biopsies was determined",
+            "enum": [
+                1,
+                2,
+                3,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Number specifically asked",
+                "Number derived from confirmed biopsies from BBD information",
+                "Other",
+                "NA (did not record)",
+                "Unknown"
+            ]
+        },
+        "biopsynum_other": {
+            "type": "string",
+            "title": "Specify how number of biopsies was determined if 'other' for biopsynum_def",
+            "description": "Free Text"
+        },
+        "pa_mets_def": {
+            "type": "integer",
+            "title": "Derivation of leisure time physical activity (MET hrs/wk)",
+            "enum": [
+                1,
+                2,
+                3
+            ],
+            "enumDescriptions": [
+                "Cohort-derived MET hrs/wk provided for harmonization",
+                "METs from cohort publication",
+                "Compendium of physical activities"
+            ]
+        },
+        "pa_pct_def": {
+            "type": "integer",
+            "title": "Derivation of leisure time physical activity percentile",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "enumDescriptions": [
+                "Percentile based on duration of LT moderate and vigorous activity (e.g. from harmonized METs variables)",
+                "Percentiles based on categorical frequency of LT moderate and vigorous activity",
+                "Percentiles based on categorical frequency of LT vigorous activity only",
+                "Percentiles based on range of 'low to high' activity not defined as duration or frequency and not described as LT",
+                "Percentiles based on duration of LT vigorous activity only",
+                "Percentiles based on frequency of LT activity, level unspecified"
+            ]
+        },
+        "smoker_def": {
+            "type": "integer",
+            "title": "Definition for current smoker",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "enumDescriptions": [
+                "Smoke at least once per week (2 months or longer)",
+                "At least 7 cigarettes per week",
+                "Smoke at least 1 pack per month",
+                "Minimum of 100 cigarettes smoked per lifetime",
+                "Other (please provide text)"
+            ]
+        },
+        "smoker_def_other": {
+            "type": "string",
+            "title": "Definition for current smoker, text",
+            "description": "Free text \nProvide if 'other' to above question"
+        },
+        "alcohol_def": {
+            "type": "integer",
+            "title": "Definition for alcohol drinker",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "enumDescriptions": [
+                "At least one drink per week (average)",
+                "At least two drinks per week",
+                "At least three drinks per week",
+                ">3 drinks per week",
+                "At least one drink/day",
+                "Other (please provide text)"
+            ]
+        },
+        "alcohol_def_other": {
+            "type": "string",
+            "title": "Definition for alcohol drinker, text",
+            "description": "Free text \nProvide if 'other' to above question"
+        },
+        "second_primary_def": {
+            "type": "string",
+            "title": "Definition for second primary",
+            "description": "Free text\nGuideline used to identify 2nd primary cancers (v. metastases)\nE.g.: NCCN, SEER"
+        },
+        "ki67_cat_def": {
+            "type": "integer",
+            "title": "Definition for Ki67 dichotomous measure",
+            "enum": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "enumDescriptions": [
+                "Low: <=10%, High >10%",
+                "Low: <=14%, High >14%",
+                "Low: <=20%, High >20%",
+                "Other (provide text)"
+            ]
+        },
+        "ki67_cat_def_other": {
+            "type": "string",
+            "title": "Definition for Ki67 dichotomous measure, text",
+            "description": "Free text"
+        }
+    }
+}

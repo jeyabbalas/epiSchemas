@@ -1,0 +1,421 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/BCRPP/IncidentBreastCancer.schema.json",
+    "type": "object",
+    "properties": {
+        "lastfup": {
+            "type": "integer",
+            "title": "Year of last follow up",
+            "enum": [
+                7777,
+                8888
+            ],
+            "enumDescriptions": [
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "dxdate_primary1": {
+            "type": "integer",
+            "title": "Year of diagnosis of 1st primary breast cancer",
+            "enum": [
+                7777,
+                8888
+            ],
+            "enumDescriptions": [
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "detection_primary1": {
+            "type": "integer",
+            "title": "Mode of detection of 1st primary breast cancer",
+            "enum": [
+                1,
+                2,
+                888
+            ],
+            "enumDescriptions": [
+                "Screen-detected",
+                "Non-screen detected",
+                "Missing/Unknown"
+            ]
+        },
+        "detection_detail_primary1": {
+            "type": "integer",
+            "title": "Details on mammogram detection",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Mammography",
+                "Sonography",
+                "Self-detected by palpation",
+                "Medical exam",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "invasive_primary1": {
+            "type": "integer",
+            "title": "Invasive or insitu for 1st primary breast cancer",
+            "enum": [
+                1,
+                2,
+                888
+            ],
+            "enumDescriptions": [
+                "Invasive",
+                "Insitu",
+                "Missing/Unknown"
+            ]
+        },
+        "dxdate_primary2": {
+            "type": "integer",
+            "title": "Year of diagnosis of 2nd primary breast cancer",
+            "enum": [
+                7777,
+                8888
+            ],
+            "enumDescriptions": [
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "detection_primary2": {
+            "type": "integer",
+            "title": "Mode of detection of 2nd primary breast cancer",
+            "enum": [
+                1,
+                2,
+                888
+            ],
+            "enumDescriptions": [
+                "Screen-detected",
+                "Non-screen detected",
+                "Missing/Unknown"
+            ]
+        },
+        "detection_detail_primary2": {
+            "type": "integer",
+            "title": "Details on mammogram detection",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Mammography",
+                "Sonography",
+                "Self-detected by palpation",
+                "Medical exam",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "invasive_primary2": {
+            "type": "integer",
+            "title": "Invasive or insitu breast cancer for 2nd primary breast cancer",
+            "enum": [
+                1,
+                2,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Invasive",
+                "Insitu",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "stage_primary1": {
+            "type": "integer",
+            "title": "TNM stage for first primary tumor",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Insitu",
+                "",
+                "",
+                "",
+                "",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "grade_primary1": {
+            "type": "integer",
+            "title": "Histopathological grade for first primary tumor",
+            "enum": [
+                1,
+                2,
+                3,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Well-differentiated",
+                "Moderately differentiated",
+                "Poorly/Undifferentiated",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "size_primary1": {
+            "type": "number",
+            "title": "Tumor size (maximum diameter in mm)",
+            "enum": [
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "sizecat_primary1": {
+            "type": "integer",
+            "title": "Tumor size of first primary, categorized",
+            "enum": [
+                1,
+                2,
+                3,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                ">0 to <=2cm",
+                ">2cm and <=5cm",
+                ">5cm",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "er_primary1": {
+            "type": "integer",
+            "title": "ER status of first primary tumor",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Negative",
+                "Positive",
+                "Missing/Unknown"
+            ]
+        },
+        "pr_primary1": {
+            "type": "integer",
+            "title": "PR status of first primary tumor",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Negative",
+                "Positive",
+                "Missing/Unknown"
+            ]
+        },
+        "her2_primary1": {
+            "type": "integer",
+            "title": "HER2 status of first primary tumor",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Negative",
+                "Positive",
+                "Missing/Unknown"
+            ]
+        },
+        "ki67_primary1": {
+            "type": "integer",
+            "title": "Ki67 expression (% positive cells) for first primary tumor",
+            "enum": [
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "ki67cat_primary1": {
+            "type": "integer",
+            "title": "Ki67 expression level for first primary tumor, dichotomous",
+            "enum": [
+                0,
+                1,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Low",
+                "High",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "stage_primary2": {
+            "type": "integer",
+            "title": "TNM stage for second primary tumor",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "grade_primary2": {
+            "type": "integer",
+            "title": "Histopathological grade for second primary tumor",
+            "enum": [
+                1,
+                2,
+                3,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Well-differentiated",
+                "Moderately differentiated",
+                "Poorly/Undifferentiated",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "size_primary2": {
+            "type": "number",
+            "title": "Tumor size second primary (maximum diameter in mm)",
+            "enum": [
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "sizecat_primary2": {
+            "type": "integer",
+            "title": "Tumor size of second primary, categorized",
+            "enum": [
+                1,
+                2,
+                3,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "<0 to <=2cm",
+                ">2cm and <=5cm",
+                ">5cm",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "er_primary2": {
+            "type": "integer",
+            "title": "ER status of second primary tumor",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Negative",
+                "Positive",
+                "Missing/Unknown"
+            ]
+        },
+        "pr_primary2": {
+            "type": "integer",
+            "title": "PR status of second primary tumor",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Negative",
+                "Positive",
+                "Missing/Unknown"
+            ]
+        },
+        "her2_primary2": {
+            "type": "integer",
+            "title": "HER2 status of second primary tumor",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Negative",
+                "Positive",
+                "Missing/Unknown"
+            ]
+        },
+        "ki67_primary2": {
+            "type": "integer",
+            "title": "Ki67 expression (% positive cells) for second primary tumor",
+            "enum": [
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "ki67cat_primary2": {
+            "type": "integer",
+            "title": "Ki67 expression level for second primary tumor, dichotomous",
+            "enum": [
+                0,
+                1,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Low",
+                "High",
+                "NA",
+                "Missing/Unknown"
+            ]
+        }
+    }
+}

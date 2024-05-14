@@ -1,0 +1,171 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/BCRPP/MammographicDensity.schema.json",
+    "type": "object",
+    "properties": {
+        "Mam_Qdate": {
+            "type": "string",
+            "format": "date",
+            "title": "Date mammogram questionnaire data collected",
+            "description": "Date in dd/mm/yyyy format. 08/08/8000 indicates Missing/Unknown."
+        },
+        "MamYear": {
+            "type": "string",
+            "pattern": "^[0-9]{4}$",
+            "title": "Year of mammogram",
+            "description": "Year in yyyy format. 8888 indicates Missing/Unknown."
+        },
+        "MamAge": {
+            "type": "number",
+            "title": "Age at mammogram",
+            "description": "Age in years. 888 indicates Missing/Unknown."
+        },
+        "MamBMI": {
+            "type": "number",
+            "title": "BMI at time of mammogram",
+            "description": "BMI in kg/m2. 888 indicates Missing/Unknown."
+        },
+        "MamMenoStat": {
+            "type": "integer",
+            "title": "Menopausal status at mammogram",
+            "description": "Menopausal status coded as: 1 - Premenopausal, 2 - Postmenopausal, 3 - Perimenopausal, 888 - Missing/Unknown.",
+            "enum": [
+                1,
+                2,
+                3,
+                888
+            ],
+            "enumDescriptions": [
+                "Premenopausal",
+                "Postmenopausal",
+                "Perimenopausal",
+                "Missing/Unknown"
+            ]
+        },
+        "MamHRTCurrent": {
+            "type": "integer",
+            "title": "Current use of HRT (or within 6 months prior to mammogram)",
+            "description": "HRT usage coded as: 0 - No (or duration <3 mo), 1 - Yes (duration >3 mo), 888 - Missing/Unknown.",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "No (or duration <3 mo)",
+                "Yes (duration >3 mo)",
+                "Missing/Unknown"
+            ]
+        },
+        "MamType": {
+            "type": "integer",
+            "title": "Digital vs Analogue",
+            "description": "Mammogram type coded as: 1 - Digital, 2 - Analogue, 888 - Missing/Unknown.",
+            "enum": [
+                1,
+                2,
+                888
+            ],
+            "enumDescriptions": [
+                "Digital",
+                "Analogue",
+                "Missing/Unknown"
+            ]
+        },
+        "MamProcess": {
+            "type": "integer",
+            "title": "Raw (\"For Processing\") vs Processed (\"For Presentation\")",
+            "description": "Processing type coded as: 1 - Raw, 2 - Processed, 777 - NA, 888 - Missing/Unknown.",
+            "enum": [
+                1,
+                2,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Raw",
+                "Processed",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "ThreshPkg": {
+            "type": "integer",
+            "title": "Thresholding package used",
+            "description": "Thresholding package coded as: 1 - Cumulus, 2 - Other, 888 - Missing/Unknown.",
+            "enum": [
+                1,
+                2,
+                888
+            ],
+            "enumDescriptions": [
+                "Cumulus",
+                "Other",
+                "Missing/Unknown"
+            ]
+        },
+        "ThreshPkg_detail": {
+            "type": "string",
+            "title": "Thresholding package used if \"other\"",
+            "description": "Free text. 777 indicates NA, 888 indicates Missing/Unknown."
+        },
+        "VolDenSoftware": {
+            "type": "integer",
+            "title": "Volumetric density software used",
+            "description": "Volumetric density software coded as: 1 - Volpara, 2 - Quantra, 3 - SXA, 4 - Other, 888 - Missing/Unknown.",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                888
+            ],
+            "enumDescriptions": [
+                "Volpara",
+                "Quantra",
+                "SXA",
+                "Other",
+                "Missing/Unknown"
+            ]
+        },
+        "VolDenSoftware_detail": {
+            "type": "string",
+            "title": "Volumetric density software used if \"other\"",
+            "description": "Free text. 777 indicates NA, 888 indicates Missing/Unknown."
+        },
+        "PDArea_A": {
+            "type": "number",
+            "title": "Percent density from thresholding method on corresponding image",
+            "description": "Numerical value with decimals. 0-100. 777 indicates NA, 888 indicates DK (Don't Know)."
+        },
+        "DenArea_A": {
+            "type": "number",
+            "title": "Absolute dense area from mammogram",
+            "description": "Numerical value in cm2 with decimals. 777 indicates NA, 888 indicates DK (Don't Know)."
+        },
+        "NonDArea_A": {
+            "type": "number",
+            "title": "Absolute nondense area from mammogram (Total area minus dense area)",
+            "description": "Numerical value in cm2 with decimals. 777 indicates NA, 888 indicates DK (Don't Know)."
+        },
+        "MamDensity": {
+            "type": "integer",
+            "title": "BIRADS density category (left & right average)",
+            "description": "BIRADS density category coded as: 1 - Fatty, 2 - Scattered areas, 3 - Heterogeneously dense, 4 - Extremely dense, 888 - Missing/Unknown.",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                888
+            ],
+            "enumDescriptions": [
+                "Fatty",
+                "Scattered areas",
+                "Heterogeneously dense",
+                "Extremely dense",
+                "Missing/Unknown"
+            ]
+        }
+    }
+}

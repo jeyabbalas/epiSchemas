@@ -1,0 +1,777 @@
+{
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/BCRPP/Core.schema.json",
+    "type": "object",
+    "properties": {
+        "subject_id": {
+            "type": "string",
+            "description": "Individual ID combining study and person info",
+            "pattern": "^[A-Z]{2}_[A-Z]{3}$"
+        },
+        "id": {
+            "type": "string",
+            "description": "Individual ID (original from study)"
+        },
+        "record_date": {
+            "type": "string",
+            "description": "Date of data/sample collection",
+            "format": "date"
+        },
+        "qcycle": {
+            "type": "integer",
+            "description": "Questionnaire cycle (repeated measures)",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Baseline",
+                "Follow up cycle #",
+                "Missing"
+            ]
+        },
+        "baseline": {
+            "type": "integer",
+            "description": "Baseline record indicator",
+            "enum": [
+                777
+            ],
+            "enumDescriptions": [
+                "Nondrinker"
+            ]
+        },
+        "lastfollowup": {
+            "type": "integer",
+            "description": "Last follow up indicator",
+            "enum": [
+                0,
+                1
+            ],
+            "enumDescriptions": [
+                "Record date is prior to last follow up",
+                "Record date is date of last follow up"
+            ]
+        },
+        "birth_year": {
+            "type": "integer",
+            "description": "Birth year",
+            "minimum": 1900,
+            "maximum": 9999
+        },
+        "sex": {
+            "type": "integer",
+            "description": "Sex",
+            "enum": [
+                0,
+                1
+            ],
+            "enumDescriptions": [
+                "Female",
+                "Male"
+            ]
+        },
+        "age": {
+            "type": "integer",
+            "description": "Age at record_date",
+            "minimum": 0
+        },
+        "race": {
+            "type": "integer",
+            "description": "Race (US OMB categories)",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                888
+            ],
+            "enumDescriptions": [
+                "White",
+                "Black/African American",
+                "Asian",
+                "Native Hawaiian/ Pacific Islander",
+                "American Indian/Alaska Native",
+                "Other, including multiracial",
+                "Missing"
+            ]
+        },
+        "ethnicity": {
+            "type": "integer",
+            "description": "Ethnicity (US OMB categories)",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Non-Hispanic/Non-Latino",
+                "Hispanic/Latino",
+                "Missing"
+            ]
+        },
+        "education": {
+            "type": "integer",
+            "description": "Highest level education attained",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                888
+            ],
+            "enumDescriptions": [
+                "Less than high school",
+                "High School",
+                "Some college education",
+                "University (degree)",
+                "Graduate school (some or degree)",
+                "Unknown/Missing"
+            ]
+        },
+        "AJAncestry": {
+            "type": "integer",
+            "description": "Ashkenazi Jewish Ancestry",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes",
+                "Missing"
+            ]
+        },
+        "height": {
+            "type": "number",
+            "description": "Height (cm)",
+            "minimum": 0
+        },
+        "weight": {
+            "type": "number",
+            "description": "Weight (kg)",
+            "minimum": 0
+        },
+        "bmi": {
+            "type": "number",
+            "description": "Body Mass Index (BMI) (kg/m2)",
+            "minimum": 0
+        },
+        "waist": {
+            "type": "number",
+            "description": "Waist Circumference (cm)",
+            "minimum": 0
+        },
+        "hip": {
+            "type": "number",
+            "description": "Hip Circumference (cm)",
+            "minimum": 0
+        },
+        "whr": {
+            "type": "number",
+            "description": "Waist to hip ratio",
+            "minimum": 0
+        },
+        "bmi_earlyadult": {
+            "type": "number",
+            "description": "Body Mass Index (BMI) (kg/m2) age 18-24",
+            "minimum": 0
+        },
+        "alcohol_status": {
+            "type": "integer",
+            "description": "Drinking status",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                888
+            ],
+            "enumDescriptions": [
+                "Current",
+                "Former",
+                "Ever (unknown current or former)",
+                "Never",
+                "Missing/Unknown"
+            ]
+        },
+        "alcohol_init": {
+            "type": "integer",
+            "description": "Age of initiation of regular alcohol drinking",
+            "minimum": 0,
+            "maximum": 120
+        },
+        "alcohol_amt": {
+            "type": "number",
+            "description": "Current alcohol intake (grams/day)",
+            "minimum": 0
+        },
+        "alcohol_stop": {
+            "type": "integer",
+            "description": "Age of cessation of regular alcohol drinking",
+            "minimum": 0,
+            "maximum": 120
+        },
+        "alcohol_dur": {
+            "type": "number",
+            "description": "Duration of regular alcohol drinking in years",
+            "minimum": 0
+        },
+        "smoking_init": {
+            "type": "integer",
+            "description": "Age of initiation of smoking",
+            "minimum": 0,
+            "maximum": 120
+        },
+        "smoking_amt": {
+            "type": "number",
+            "description": "Current amount smoked (cig/day)",
+            "minimum": 0
+        },
+        "smoking_dur": {
+            "type": "number",
+            "description": "Duration of smoking in years",
+            "minimum": 0
+        },
+        "smoking_status": {
+            "type": "integer",
+            "description": "Smoking status",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                888
+            ],
+            "enumDescriptions": [
+                "Current",
+                "Former",
+                "Ever (unknown current or former)",
+                "Never",
+                "Missing/Unknown"
+            ]
+        },
+        "smoking_stop": {
+            "type": "integer",
+            "description": "Age of cessation of smoking",
+            "minimum": 0,
+            "maximum": 120
+        },
+        "fhx_fdr_brca": {
+            "type": "integer",
+            "description": "Family history of breast cancer (first degree relative)",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes",
+                "Missing"
+            ]
+        },
+        "Biopsies_yesno": {
+            "type": "integer",
+            "description": "Ever had a breast biopsy, excluding biopsies leading to diagnosis of cancer in cases",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes",
+                "Missing"
+            ]
+        },
+        "Biopsies_number": {
+            "type": "integer",
+            "description": "Number of breast biopsies, excluding biopsies leading to diagnosis of breast cancer in cases",
+            "minimum": 0
+        },
+        "BBD_history": {
+            "type": "integer",
+            "description": "History of benign breast disease",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes",
+                "Missing/Unknown"
+            ]
+        },
+        "BBD_number": {
+            "type": "integer",
+            "description": "Number of benign breast disease diagnoses",
+            "minimum": 0,
+            "maximum": 5
+        },
+        "BBD_type1": {
+            "type": "integer",
+            "description": "Type of benign breast disease for first BBD diagnosis",
+            "enum": [
+                1,
+                2,
+                3,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "non-proliferative disease",
+                "proliferative disease without atypia",
+                "atypical hyperplasia",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "BBD_year1": {
+            "type": "integer",
+            "description": "Year of diagnosis of first benign breast disease diagnosis",
+            "minimum": 1900,
+            "maximum": 9999
+        },
+        "BBD_type2": {
+            "type": "integer",
+            "description": "Type of benign breast disease for second BBD diagnosis",
+            "enum": [
+                1,
+                2,
+                3,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "non-proliferative disease",
+                "proliferative disease without atypia",
+                "atypical hyperplasia",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "BBD_year2": {
+            "type": "integer",
+            "description": "Year of diagnosis of second benign breast disease diagnosis",
+            "minimum": 1900,
+            "maximum": 9999
+        },
+        "BBD_type3": {
+            "type": "integer",
+            "description": "Type of benign breast disease for third BBD diagnosis",
+            "enum": [
+                1,
+                2,
+                3,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "non-proliferative disease",
+                "proliferative disease without atypia",
+                "atypical hyperplasia",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "BBD_year3": {
+            "type": "integer",
+            "description": "Year of diagnosis of third benign breast disease diagnosis",
+            "minimum": 1900,
+            "maximum": 9999
+        },
+        "BBD_type4": {
+            "type": "integer",
+            "description": "Type of benign breast disease for fourth BBD diagnosis",
+            "enum": [
+                1,
+                2,
+                3,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "non-proliferative disease",
+                "proliferative disease without atypia",
+                "atypical hyperplasia",
+                "NA",
+                "Missing/Unknown"
+            ]
+        },
+        "BBD_year4": {
+            "type": "integer",
+            "description": "Year of diagnosis of fourth benign breast disease diagnosis",
+            "minimum": 1900,
+            "maximum": 9999
+        },
+        "agemenarche": {
+            "type": "number",
+            "description": "Age at menarche",
+            "minimum": 0
+        },
+        "parous": {
+            "type": "integer",
+            "description": "Parous or not",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Non-parous",
+                "Parous",
+                "Missing"
+            ]
+        },
+        "age_preg1": {
+            "type": "number",
+            "description": "Age at first pregnancy (full-term)",
+            "minimum": 0
+        },
+        "parity": {
+            "type": "integer",
+            "description": "Number of pregnancies (full-term)",
+            "minimum": 0
+        },
+        "breastfeed": {
+            "type": "integer",
+            "description": "Ever breastfeed",
+            "enum": [
+                0,
+                1,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Never Breastfed",
+                "Ever Breastfed",
+                "Nonparous",
+                "Missing/Unknown"
+            ]
+        },
+        "breastfeed_dur": {
+            "type": "number",
+            "description": "Cumulative lifetime duration of breastfeeding (months)",
+            "minimum": 0
+        },
+        "breastfeed_dur_b1": {
+            "type": "number",
+            "description": "Duration of breastfeeding (months) for first birth",
+            "minimum": 0
+        },
+        "meno_status": {
+            "type": "integer",
+            "description": "Menopausal status",
+            "enum": [
+                1,
+                2,
+                3,
+                888
+            ],
+            "enumDescriptions": [
+                "Postmenopausal",
+                "Premenopuasal",
+                "Perimenopausal/other",
+                "Missing/Unknown"
+            ]
+        },
+        "meno_age": {
+            "type": "number",
+            "description": "Age at menopause in years",
+            "minimum": 0
+        },
+        "meno_reason": {
+            "type": "integer",
+            "description": "Reason for menopause",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                777,
+                888
+            ],
+            "enumDescriptions": [
+                "Natural",
+                "Surgical",
+                "Radiation/Chemotherapy induced",
+                "Medication",
+                "Artificial/Induced (no detail)",
+                "NA (premenopausal)",
+                "Missing/Unknown"
+            ]
+        },
+        "age_preg2": {
+            "type": "number",
+            "description": "Age at second pregnancy (full-term)",
+            "minimum": 0
+        },
+        "age_preg3": {
+            "type": "number",
+            "description": "Age at third pregnancy (full-term)",
+            "minimum": 0
+        },
+        "age_preg4": {
+            "type": "number",
+            "description": "Age at fourth pregnancy (full-term)",
+            "minimum": 0
+        },
+        "age_preg5": {
+            "type": "number",
+            "description": "Age at fifth pregnancy (full-term)",
+            "minimum": 0
+        },
+        "age_preg6": {
+            "type": "number",
+            "description": "Age at sixth pregnancy (full-term)",
+            "minimum": 0
+        },
+        "age_preg7": {
+            "type": "number",
+            "description": "Age at seventh pregnancy (full-term)",
+            "minimum": 0
+        },
+        "age_preg8": {
+            "type": "number",
+            "description": "Age at eighth pregnancy (full-term)",
+            "minimum": 0
+        },
+        "age_preg9": {
+            "type": "number",
+            "description": "Age at ninth pregnancy (full-term)",
+            "minimum": 0
+        },
+        "age_preg10": {
+            "type": "number",
+            "description": "Age at tenth pregnancy (full-term)",
+            "minimum": 0
+        },
+        "breastfeed_dur_b2": {
+            "type": "number",
+            "description": "Duration of breastfeeding (months) for second birth",
+            "minimum": 0
+        },
+        "breastfeed_dur_b3": {
+            "type": "number",
+            "description": "Duration of breastfeeding (months) for third birth",
+            "minimum": 0
+        },
+        "breastfeed_dur_b4": {
+            "type": "number",
+            "description": "Duration of breastfeeding (months) for fourth birth",
+            "minimum": 0
+        },
+        "breastfeed_dur_b5": {
+            "type": "number",
+            "description": "Duration of breastfeeding (months) for fifth birth",
+            "minimum": 0
+        },
+        "breastfeed_dur_b6": {
+            "type": "number",
+            "description": "Duration of breastfeeding (months) for sixth birth",
+            "minimum": 0
+        },
+        "breastfeed_dur_b7": {
+            "type": "number",
+            "description": "Duration of breastfeeding (months) for seventh birth",
+            "minimum": 0
+        },
+        "breastfeed_dur_b8": {
+            "type": "number",
+            "description": "Duration of breastfeeding (months) for eighth birth",
+            "minimum": 0
+        },
+        "breastfeed_dur_b9": {
+            "type": "number",
+            "description": "Duration of breastfeeding (months) for ninth birth",
+            "minimum": 0
+        },
+        "breastfeed_dur_b10": {
+            "type": "number",
+            "description": "Duration of breastfeeding (months) for tenth birth",
+            "minimum": 0
+        },
+        "ocuse_ever": {
+            "type": "integer",
+            "description": "Ever use of oral contraceptives",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Never used oral contraceptives",
+                "Ever used oral contraceptives",
+                "Missing/Unknown"
+            ]
+        },
+        "ocuse_current": {
+            "type": "integer",
+            "description": "Current OC use (at record_date)",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes",
+                "Missing/Unknown"
+            ]
+        },
+        "ocuse_dur": {
+            "type": "number",
+            "description": "Lifetime duration of oral contraceptive use  in months",
+            "minimum": 0
+        },
+        "ocuse_start": {
+            "type": "number",
+            "description": "Age at first use of oral contraceptive",
+            "minimum": 0
+        },
+        "ocuse_stop": {
+            "type": "number",
+            "description": "Age at last use of oral contraceptive",
+            "minimum": 0
+        },
+        "othcontracep_ever": {
+            "type": "integer",
+            "description": "Use of other types of hormonal contraceptives",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Never",
+                "Ever",
+                "Missing/Unknown"
+            ]
+        },
+        "othcontracep_current": {
+            "type": "integer",
+            "description": "Current use of other types of hormonal contraceptives",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "No",
+                "Yes",
+                "Missing/Unknown"
+            ]
+        },
+        "hrtuse": {
+            "type": "integer",
+            "description": "Use of any hormone replacement therapy",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                888
+            ],
+            "enumDescriptions": [
+                "Never used hormonal replacement therapy",
+                "Current use",
+                "Former use",
+                "Ever used (unknown current or former)",
+                "Missing/Unknown"
+            ]
+        },
+        "hrt_dur": {
+            "type": "number",
+            "description": "Lifetime duration of hormonal replacement therapy in months",
+            "minimum": 0
+        },
+        "hrtuse_ep": {
+            "type": "integer",
+            "description": "Use of E+P hormone replacement therapy",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                888
+            ],
+            "enumDescriptions": [
+                "Never used hormonal replacement therapy",
+                "Current use",
+                "Former use",
+                "Ever used (unknown current or former)",
+                "Missing/Unknown"
+            ]
+        },
+        "hrtep_dur": {
+            "type": "number",
+            "description": "Lifetime duration of E+P hormonal replacement therapy in months",
+            "minimum": 0
+        },
+        "hrtuse_eonly": {
+            "type": "integer",
+            "description": "Use of E only hormone replacement therapy",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                888
+            ],
+            "enumDescriptions": [
+                "Never used hormonal replacement therapy",
+                "Current use",
+                "Former use",
+                "Ever used (unknown current or former)",
+                "Missing/Unknown"
+            ]
+        },
+        "hrteonly_dur": {
+            "type": "number",
+            "description": "Lifetime duration of E only hormonal replacement therapy in months",
+            "minimum": 0
+        },
+        "pa_mets": {
+            "type": "number",
+            "description": "Leisure time physical activity (MET hrs/wk)",
+            "minimum": 0
+        },
+        "pa_pct": {
+            "type": "integer",
+            "description": "Leisure time physical activity (percentile)",
+            "minimum": 0
+        },
+        "screen_ever": {
+            "type": "integer",
+            "description": "Ever had a screening mammogram",
+            "enum": [
+                0,
+                1,
+                888
+            ],
+            "enumDescriptions": [
+                "Never",
+                "Ever",
+                "Missing/Unknown"
+            ]
+        },
+        "screen_start": {
+            "type": "number",
+            "description": "Age at first screening mammogram",
+            "minimum": 0
+        },
+        "lastscreen_year": {
+            "type": "integer",
+            "description": "Year of last screening mammogram",
+            "minimum": 1900,
+            "maximum": 9999
+        }
+    }
+}
